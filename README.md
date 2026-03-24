@@ -124,8 +124,8 @@ python3 scripts/test_pddl.py
 
 ## 文档
 
-- [tech-note-0v1.md](tech-note-0v1.md) — 完整技术文档（术语、14 节、形式化定义、实验）
-- [results/analysis.md](results/analysis.md) — 一阶段实验分析报告
+- [tech-note-0v1.md](tech-note-0v1.md) — 技术文档（术语、形式化定义、实验设计）
+- [results/analysis.md](results/phase1_analysis.md) — 一阶段实验分析报告
 - [results/phase2_analysis.md](results/phase2_analysis.md) — 二阶段实验分析报告
 - [ROADMAP-phase1.md](ROADMAP-phase1.md) — 一阶段路线图（已完成）
 - [ROADMAP-phase2.md](ROADMAP-phase2.md) — 二阶段路线图（已完成）
