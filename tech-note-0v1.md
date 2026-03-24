@@ -1,6 +1,6 @@
 # 参考语义驱动的机器人语义重写框架（LCOS-R）
 
-**状态**：草案  
+**状态**：已实验初步验证  
 **用途**：内部 tech note，用来定住术语、核心 claim、最小形式化骨架和最小实验  
 **定位**：研究命题 + 最小可验证框架，不追求论文级完备性
 
@@ -188,11 +188,11 @@ $$ \Sigma_t = (\mathcal{S}_t,\mathcal{R}_t^b,\mathcal{R}_t^g,\mathcal{A}_t,\math
 
 **可重写对象语法**（meta-level 控制参数，不属于语义签名 $\Sigma_t$ ，而是 rewrite 框架的控制信息）：
 
-$$ \mathcal{G}_t = (\mathcal{T}_G,\, \mathcal{R}_G) $$
+$$ \mathcal{G}_t = (\mathcal{T}_G, \mathcal{R}_G) $$
 
 其中：
 
-- $\mathcal{T}_G \subseteq \{\texttt{state},\, \texttt{rule},\, \texttt{act},\, \texttt{plan},\, \texttt{aff}\}$ 标记哪些类型的内部对象允许被 rewrite
+- $\mathcal{T}_G \subseteq \{\texttt{state}, \texttt{rule}, \texttt{act}, \texttt{plan}, \texttt{aff}\}$ 标记哪些类型的内部对象允许被 rewrite
 - $\mathcal{R}_G$ 是该类型上的合法重写模式集合（例如"允许谓词折叠""允许冗余规则消除""允许无关对象裁剪"）
 
 核心约束 $\mathcal{C}_\star$ 中的对象默认**不可重写**，除非显式声明。 $\mathcal{G}_t$ 由系统设计者初始指定，可随扩展而增长，但增长本身须满足准入准则（见 Section 8）。
@@ -269,7 +269,7 @@ $$
 
 对渐变原子 $G(\mathbf{d})$ ，保存为：
 
-$$ (\mu_{G,\mathbf{d}},\, \sigma_{G,\mathbf{d}}) = \big(\mathbb{E}_{\omega \sim b_t}[I^g(G,\mathbf{d})],\; \sqrt{\mathrm{Var}_{\omega \sim b_t}[I^g(G,\mathbf{d})]}\big) $$
+$$ (\mu_{G,\mathbf{d}}, \sigma_{G,\mathbf{d}}) = \big(\mathbb{E}_{\omega \sim b_t}[I^g(G,\mathbf{d})],\; \sqrt{\mathrm{Var}_{\omega \sim b_t}[I^g(G,\mathbf{d})]}\big) $$
 
 即"程度估计 + 不确定性估计"。
 
@@ -293,12 +293,12 @@ $$ \mathrm{Aff}_t(\mathbf{d},a,e) = \Pr(e \text{ occurs after } a(\mathbf{d}) \m
 
 $\mathrm{Pre}(a)$ 是关于 $z_t^{sym}$ 和 $z_t^{aff}$ 的公式。例如：
 
-$$ \mathrm{Pre}(\mathrm{grasp}(x)) = \mathrm{reachable}(x) \land \neg\,\mathrm{blocked}(x) \land \mathrm{aff\_ok}(x,\mathrm{grasp},\text{can-grasp}) $$
+$$ \mathrm{Pre}(\mathrm{grasp}(x)) = \mathrm{reachable}(x) \land \neg\,\mathrm{blocked}(x) \land \mathrm{aff\\_ok}(x,\mathrm{grasp},\text{can-grasp}) $$
 
-其中 affordance 判定 $\mathrm{aff\_ok}$ 采用与布尔谓词一致的双阈值机制，投影为三值：
+其中 affordance 判定 $\mathrm{aff\\_ok}$ 采用与布尔谓词一致的双阈值机制，投影为三值：
 
 $$
-\mathrm{aff\_ok}(\mathbf{d}, a, e) =
+\mathrm{aff\\_ok}(\mathbf{d}, a, e) =
 \begin{cases}
 \top, & \mathrm{Aff}_t(\mathbf{d},a,e) \ge \eta_+ \\
 \bot, & \mathrm{Aff}_t(\mathbf{d},a,e) \le \eta_- \\
@@ -336,9 +336,7 @@ $$ \Pr(\text{violates } \mathcal{C}_\star \mid b_t, a) \le \delta $$
 
 不直接用三值吃掉，而是保留 $(\mu, \sigma)$ 。决策时通过规则投影，例如：
 
-$$ 
-\mathrm{safe\_to\_touch}(x) = \mathbf{1}\big[\mu_{\mathrm{hot}}(x) \le \eta_h \;\land\; \sigma_{\mathrm{hot}}(x) \le \eta_u\big] 
-$$
+$$ \mathrm{safe\\_to\\_touch}(x) = \mathbf{1}\big[\mu_{\mathrm{hot}}(x) \le \eta_h \;\land\; \sigma_{\mathrm{hot}}(x) \le \eta_u\big] $$
 
 这样：程度性概念保留程度值，认识不确定性单独保留，决策层再统一处理。
 
@@ -435,7 +433,7 @@ $\equiv_t$ 是真正的等价关系（满足自反性、对称性、传递性）
 
 $$ c \sim_{\varepsilon,t} c' \iff \forall q \in Q_t,\ |q(c)-q(c')| \le \varepsilon_q $$
 
-**警告**： $\sim_{\varepsilon,t}$ **不满足传递性** —— $c \sim_{\varepsilon,t} c'$ 且 $c' \sim_{\varepsilon,t} c''$ 不能推出 $c \sim_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon_q$ 的累积偏差）。因此 $\sim_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导**$\varepsilon$-邻域**。
+**警告**： $\sim_{\varepsilon,t}$ **不满足传递性** —— $c \sim_{\varepsilon,t} c'$ 且 $c' \sim_{\varepsilon,t} c''$ 不能推出 $c \sim_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon_q$ 的累积偏差）。因此 $\sim_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导**$\varepsilon$ -邻域**。
 
 在后续讨论中：
 
@@ -568,16 +566,16 @@ $$
 这里直接区分 rewrite 和 dynamics：
 
 - 若替换前后的**系统配置**在精确等价 $\equiv_t$ 下属于同一等价类，则它是 **exact rewrite**
-- 若替换前后在容差近似 $\sim_{\varepsilon,t}$ 下属于同一 $\varepsilon$-邻域（但不精确等价），则它是 **approximate rewrite**
-- 若执行动作后系统配置跨出了当前等价类/ $\varepsilon$-邻域，则它是 **dynamics**
+- 若替换前后在容差近似 $\sim_{\varepsilon,t}$ 下属于同一 $\varepsilon$ -邻域（但不精确等价），则它是 **approximate rewrite**
+- 若执行动作后系统配置跨出了当前等价类/ $\varepsilon$ -邻域，则它是 **dynamics**
 
 换句话说：
 
 > **exact rewrite = 等价类内优化（精确保义）**
-> **approximate rewrite = $\varepsilon$-邻域内优化（近似保义，需误差预算）**
+> **approximate rewrite = $\varepsilon$ -邻域内优化（近似保义，需误差预算）**
 > **dynamics = 等价类间迁移（语义变化）**
 
-注意："等价类"严格限于精确等价 $\equiv_t$ 。approximate rewrite 不在"等价类内"，而是在"$\varepsilon$-邻域内"——这个区分是 §5.3 修正的直接推论。
+注意："等价类"严格限于精确等价 $\equiv_t$ 。approximate rewrite 不在"等价类内"，而是在"$\varepsilon$ -邻域内"——这个区分是 §5.3 修正的直接推论。
 
 ### 等价类随测试集演化的稳定性
 
@@ -601,7 +599,7 @@ $$
 
 若谓词 $P$ 在当前有限对象域 $D_t$ 上可判定地由其他谓词集合推出，或至少在 $Q_\star$ 所覆盖的全部查询上与 $\phi$ 测试等价，则移除 $P$ 并将所有引用替换为 $\phi$ 。
 **例**：若 `graspable(x) ≡ reachable(x) ∧ ¬blocked(x)`，则消除 `graspable` 谓词，用右侧展开替换。
-**合法性验证**：检查 $\forall q \in Q_\star,\, q(c_t) = q(c_t[x \leftarrow x'])$ 。
+**合法性验证**：检查 $\forall q \in Q_\star, q(c_t) = q(c_t[x \leftarrow x'])$ 。
 **$Q_\star$ 一致性**：若 $Q_\star$ 中有测试直接引用被消除的谓词 $P$ ，则必须同时更新该测试的表述（用等价展开 $\phi$ 替换 $P$ ），并验证更新后的测试在所有合法配置上输出与原测试相同。这保证 $Q_\star$ 的"只增不减"属性不会因谓词消除而被违反——测试数量不减，只是内部表述被等价替换。
 
 **Pass 1 伪代码**：
@@ -640,7 +638,7 @@ REDUNDANT-PREDICATE-ELIMINATION(c_t, Q_star):
 
 若对象 $e$ 不出现在当前任务测试 $Q_t^{task}$ 的任何输入中，则从工作状态中移除 $e$ 及其关联事实。  
 **例**：桌面整理任务中，远处墙角的椅子不影响任何测试，可裁剪。  
-**合法性验证**：检查 $\forall q \in Q_t^{task},\, q(c_t) = q(c_t[x \leftarrow x'])$ 。
+**合法性验证**：检查 $\forall q \in Q_t^{task}, q(c_t) = q(c_t[x \leftarrow x'])$ 。
 
 #### Pass 4：宏动作化（Task-Preserving）
 
@@ -799,9 +797,9 @@ $$ J_{new} < J_{old} - \epsilon $$
 
 $J$ 中的 $L_{\mathrm{plan}}$ （规划开销）和 $L_{\mathrm{comp}}$ （表示复杂度）只有在扩展安装并完成 rewrite 后才能准确测量。但准入判定需要在安装前做出。为解决这一循环依赖，引入 $J$ 的**廉价近似估计** $\hat{J}$ ：
 
-- $\hat{L}_{\mathrm{comp}}$ ：用新增规则数、新增谓词数的增量估计（ $O(1)$ 计算）
-- $\hat{L}_{\mathrm{plan}}$ ：用 PDDL action 数量增量 + 新增约束数估计规划开销变化（ $O(1)$ 计算）
-- $\hat{L}_{\mathrm{safe}}$ ：用新约束是否触及 $Q_\star$ 相关谓词来估计安全影响（ $O(|Q_\star|)$ 计算）
+- $\hat{L}\_{\mathrm{comp}}$ ：用新增规则数、新增谓词数的增量估计（ $O(1)$ 计算）
+- $\hat{L}\_{\mathrm{plan}}$ ：用 PDDL action 数量增量 + 新增约束数估计规划开销变化（ $O(1)$ 计算）
+- $\hat{L}\_{\mathrm{safe}}$ ：用新约束是否触及 $Q\_\star$ 相关谓词来估计安全影响（ $O(|Q\_\star|)$ 计算）
 
 准入流程分两阶段：
 
@@ -1221,7 +1219,7 @@ Section 9.6 的实验为上述数学框架提供了初步经验支撑：
 以下步骤已完成（详见 §9.6 实验结果和 ROADMAP.md）：
 
 - [x] 下载 AgiBot World Task Catalog，提取五个领域的语义签名要素
-- [x] 实现语义签名 $\Sigma_t$ 数据结构和 Task→$\Sigma_t$ 映射
+- [x] 实现语义签名 $\Sigma_t$ 数据结构和 Task→ $\Sigma_t$ 映射
 - [x] 实现 $Q_\star$ / $Q_t^{task}$ 测试接口（PDDL + BFS planner）
 - [x] 实现 3 个 rewrite pass + 合法性验证
 - [x] 运行 5 阶段 × 4 组对比实验
