@@ -1,0 +1,9 @@
+data/agibot-world/task_info/
+data/agibot-world/.git/
+data/agibot-world/.cache/
+data/agibot-world/extraction_report.txt
+data/agibot-world/signature_extraction.json
+__pycache__/
+*.pyc
+results/raw/
+results/pilot/

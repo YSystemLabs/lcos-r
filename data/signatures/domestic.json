@@ -1,0 +1,1268 @@
+{
+  "S_t": {
+    "object": null,
+    "container": "object",
+    "surface": "object",
+    "tool": "object",
+    "food": "object",
+    "appliance": "object",
+    "clothing": "object",
+    "document": "object",
+    "furniture": "object",
+    "location": null,
+    "agent": null,
+    "cup": "container",
+    "bowl": "container",
+    "plate": "container",
+    "bottle": "container",
+    "pot": "container",
+    "basket": "container",
+    "drawer": "container",
+    "fridge": "appliance",
+    "microwave": "appliance",
+    "oven": "appliance",
+    "toaster": "appliance",
+    "kettle": "appliance",
+    "washing_machine": "appliance",
+    "vacuum": "tool",
+    "broom": "tool",
+    "mop": "tool",
+    "cloth": "tool",
+    "sponge": "tool",
+    "iron": "tool",
+    "hanger": "tool",
+    "table": "surface",
+    "counter": "surface",
+    "bed": "furniture",
+    "sofa": "furniture",
+    "wardrobe": "furniture",
+    "bookshelf": "furniture",
+    "curtain": "object",
+    "pillow": "object",
+    "towel": "clothing",
+    "shorts": "clothing",
+    "shirt": "clothing",
+    "toy": "object",
+    "flower": "object",
+    "key": "object"
+  },
+  "D_t": {},
+  "R_b": {
+    "on": {
+      "name": "on",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "surface"
+      ]
+    },
+    "in": {
+      "name": "in",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "container"
+      ]
+    },
+    "holding": {
+      "name": "holding",
+      "arity": 2,
+      "param_types": [
+        "agent",
+        "object"
+      ]
+    },
+    "reachable": {
+      "name": "reachable",
+      "arity": 2,
+      "param_types": [
+        "agent",
+        "object"
+      ]
+    },
+    "clear": {
+      "name": "clear",
+      "arity": 1,
+      "param_types": [
+        "surface"
+      ]
+    },
+    "open": {
+      "name": "open",
+      "arity": 1,
+      "param_types": [
+        "container"
+      ]
+    },
+    "closed": {
+      "name": "closed",
+      "arity": 1,
+      "param_types": [
+        "container"
+      ]
+    },
+    "clean": {
+      "name": "clean",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "dirty": {
+      "name": "dirty",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "folded": {
+      "name": "folded",
+      "arity": 1,
+      "param_types": [
+        "clothing"
+      ]
+    },
+    "hung": {
+      "name": "hung",
+      "arity": 1,
+      "param_types": [
+        "clothing"
+      ]
+    },
+    "boiling": {
+      "name": "boiling",
+      "arity": 1,
+      "param_types": [
+        "container"
+      ]
+    },
+    "powered_on": {
+      "name": "powered_on",
+      "arity": 1,
+      "param_types": [
+        "appliance"
+      ]
+    },
+    "empty": {
+      "name": "empty",
+      "arity": 1,
+      "param_types": [
+        "container"
+      ]
+    },
+    "ironed": {
+      "name": "ironed",
+      "arity": 1,
+      "param_types": [
+        "clothing"
+      ]
+    },
+    "plugged_in": {
+      "name": "plugged_in",
+      "arity": 1,
+      "param_types": [
+        "appliance"
+      ]
+    },
+    "curtain_open": {
+      "name": "curtain_open",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "arranged": {
+      "name": "arranged",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "stacked": {
+      "name": "stacked",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "object"
+      ]
+    }
+  },
+  "R_g": {
+    "hot": {
+      "name": "hot",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ],
+      "threshold": 0.7
+    },
+    "fragile": {
+      "name": "fragile",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ],
+      "threshold": 0.5
+    },
+    "full": {
+      "name": "full",
+      "arity": 1,
+      "param_types": [
+        "container"
+      ],
+      "threshold": 0.8
+    },
+    "heavy": {
+      "name": "heavy",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ],
+      "threshold": 0.7
+    },
+    "wet": {
+      "name": "wet",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ],
+      "threshold": 0.5
+    },
+    "wrinkled": {
+      "name": "wrinkled",
+      "arity": 1,
+      "param_types": [
+        "clothing"
+      ],
+      "threshold": 0.5
+    }
+  },
+  "A_t": {
+    "pick": {
+      "name": "pick",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        },
+        {
+          "name": "clear",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        },
+        {
+          "name": "on",
+          "args": [
+            "obj",
+            "_src"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "place": {
+      "name": "place",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "dst",
+          "type_name": "surface"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "on",
+          "args": [
+            "obj",
+            "dst"
+          ]
+        },
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "pour": {
+      "name": "pour",
+      "parameters": [
+        {
+          "name": "src",
+          "type_name": "container"
+        },
+        {
+          "name": "dst",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "src"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "empty",
+          "args": [
+            "src"
+          ]
+        },
+        {
+          "name": "full",
+          "args": [
+            "dst"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "open": {
+      "name": "open",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        },
+        {
+          "name": "closed",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "open",
+          "args": [
+            "obj"
+          ]
+        },
+        {
+          "name": "closed",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "close": {
+      "name": "close",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        },
+        {
+          "name": "open",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "closed",
+          "args": [
+            "obj"
+          ]
+        },
+        {
+          "name": "open",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "wipe": {
+      "name": "wipe",
+      "parameters": [
+        {
+          "name": "surface",
+          "type_name": "surface"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        },
+        {
+          "name": "dirty",
+          "args": [
+            "surface"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "clean",
+          "args": [
+            "surface"
+          ]
+        },
+        {
+          "name": "dirty",
+          "args": [
+            "surface"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "push": {
+      "name": "push",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "pull": {
+      "name": "pull",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "carry": {
+      "name": "carry",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "dst",
+          "type_name": "location"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "handover": {
+      "name": "handover",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "src",
+          "type_name": "agent"
+        },
+        {
+          "name": "dst",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "src",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "dst",
+            "obj"
+          ]
+        },
+        {
+          "name": "holding",
+          "args": [
+            "src",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "grasp": {
+      "name": "grasp",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ]
+    },
+    "release": {
+      "name": "release",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "press_button": {
+      "name": "press_button",
+      "parameters": [
+        {
+          "name": "appliance",
+          "type_name": "appliance"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "appliance"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "powered_on",
+          "args": [
+            "appliance"
+          ]
+        }
+      ]
+    },
+    "insert": {
+      "name": "insert",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "dst",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "fold": {
+      "name": "fold",
+      "parameters": [
+        {
+          "name": "item",
+          "type_name": "clothing"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "item"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "folded",
+          "args": [
+            "item"
+          ]
+        }
+      ]
+    },
+    "hang": {
+      "name": "hang",
+      "parameters": [
+        {
+          "name": "item",
+          "type_name": "object"
+        },
+        {
+          "name": "hook",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "item"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "hung",
+          "args": [
+            "item"
+          ]
+        },
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "item"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "sweep": {
+      "name": "sweep",
+      "parameters": [
+        {
+          "name": "area",
+          "type_name": "surface"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "clean",
+          "args": [
+            "area"
+          ]
+        }
+      ]
+    },
+    "lift": {
+      "name": "lift",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ]
+    },
+    "drop": {
+      "name": "drop",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "stir": {
+      "name": "stir",
+      "parameters": [
+        {
+          "name": "container",
+          "type_name": "container"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "scoop": {
+      "name": "scoop",
+      "parameters": [
+        {
+          "name": "src",
+          "type_name": "container"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "iron": {
+      "name": "iron",
+      "parameters": [
+        {
+          "name": "item",
+          "type_name": "clothing"
+        },
+        {
+          "name": "iron",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "iron"
+          ]
+        },
+        {
+          "name": "powered_on",
+          "args": [
+            "iron"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "ironed",
+          "args": [
+            "item"
+          ]
+        },
+        {
+          "name": "wrinkled",
+          "args": [
+            "item"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "vacuum": {
+      "name": "vacuum",
+      "parameters": [
+        {
+          "name": "area",
+          "type_name": "surface"
+        },
+        {
+          "name": "vac",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "vac"
+          ]
+        },
+        {
+          "name": "powered_on",
+          "args": [
+            "vac"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "clean",
+          "args": [
+            "area"
+          ]
+        }
+      ]
+    },
+    "mop": {
+      "name": "mop",
+      "parameters": [
+        {
+          "name": "area",
+          "type_name": "surface"
+        },
+        {
+          "name": "mop",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "mop"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "clean",
+          "args": [
+            "area"
+          ]
+        }
+      ]
+    },
+    "peel": {
+      "name": "peel",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "brush": {
+      "name": "brush",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "clean",
+          "args": [
+            "obj"
+          ]
+        }
+      ]
+    }
+  },
+  "E_t": [
+    "can-grasp",
+    "clean-result",
+    "collision-risk",
+    "cook-result",
+    "fold-result",
+    "goal-progress",
+    "will-spill"
+  ],
+  "C_t": {
+    "type_consistency": {
+      "name": "type_consistency",
+      "condition": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ]
+    },
+    "safety_hot": {
+      "name": "safety_hot",
+      "condition": [
+        {
+          "name": "hot",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_bare_grasp",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "safety_fragile": {
+      "name": "safety_fragile",
+      "condition": [
+        {
+          "name": "fragile",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_force_grasp",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "full_no_rotate": {
+      "name": "full_no_rotate",
+      "condition": [
+        {
+          "name": "full",
+          "args": [
+            "container"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_rotate",
+          "args": [
+            "container"
+          ],
+          "negated": true
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "name": "graspable_derived",
+      "type": "derivation",
+      "body": "graspable(x) ≡ reachable(x) ∧ ¬blocked(x)"
+    },
+    {
+      "name": "safe_to_touch",
+      "type": "derivation",
+      "body": "safe_to_touch(x) ≡ ¬hot(x) ∨ holding_tool(agent)"
+    },
+    {
+      "name": "laundry_ready",
+      "type": "derivation",
+      "body": "laundry_ready(x) ≡ dirty(x) ∧ clothing(x)"
+    },
+    {
+      "name": "cookware_hot_after_use",
+      "type": "causal",
+      "body": "used_on_stove(x) → hot(x)"
+    }
+  ]
+}

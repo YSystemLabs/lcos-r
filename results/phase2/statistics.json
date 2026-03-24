@@ -1,0 +1,15 @@
+{
+  "mcnemar_p": 8e-06,
+  "eo_plannable_rate": 0.0,
+  "er_plannable_rate": 1.0,
+  "risk_difference": 1.0,
+  "ci_95_lower": 1.0,
+  "ci_95_upper": 1.0,
+  "n_tasks": 18,
+  "contingency": {
+    "a": 0,
+    "b": 0,
+    "c": 18,
+    "d": 0
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "S_t": {
+    "shelf": "surface",
+    "shopping_cart": "container",
+    "checkout_counter": "surface",
+    "cash_register": "appliance",
+    "barcode_scanner": "tool",
+    "plastic_bag": "container",
+    "cardboard_box": "container",
+    "snack": "food",
+    "fruit": "food",
+    "frozen_item": "food",
+    "price_tag": "object",
+    "metal_detector": "tool",
+    "gong": "tool"
+  },
+  "D_t": {},
+  "R_b": {
+    "on_shelf": {
+      "name": "on_shelf",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "surface"
+      ]
+    },
+    "scanned": {
+      "name": "scanned",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "bagged": {
+      "name": "bagged",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "restocked": {
+      "name": "restocked",
+      "arity": 1,
+      "param_types": [
+        "surface"
+      ]
+    },
+    "in_cart": {
+      "name": "in_cart",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "container"
+      ]
+    },
+    "price_checked": {
+      "name": "price_checked",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    }
+  },
+  "R_g": {
+    "shelf_load": {
+      "name": "shelf_load",
+      "arity": 1,
+      "param_types": [
+        "surface"
+      ],
+      "threshold": 0.9
+    }
+  },
+  "A_t": {
+    "scan": {
+      "name": "scan",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "scanner",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "scanner"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "scanned",
+          "args": [
+            "obj"
+          ]
+        }
+      ]
+    },
+    "bag": {
+      "name": "bag",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "bag",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "bagged",
+          "args": [
+            "obj"
+          ]
+        },
+        {
+          "name": "in_cart",
+          "args": [
+            "obj",
+            "bag"
+          ]
+        }
+      ]
+    },
+    "restock": {
+      "name": "restock",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "shelf",
+          "type_name": "surface"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "on_shelf",
+          "args": [
+            "obj",
+            "shelf"
+          ]
+        },
+        {
+          "name": "restocked",
+          "args": [
+            "shelf"
+          ]
+        }
+      ]
+    }
+  },
+  "E_t": [],
+  "C_t": {
+    "shelf_weight": {
+      "name": "shelf_weight",
+      "condition": [
+        {
+          "name": "shelf_load",
+          "args": [
+            "shelf"
+          ]
+        },
+        {
+          "name": "heavy",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_place_on_shelf",
+          "args": [
+            "obj",
+            "shelf"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "scan_before_bag": {
+      "name": "scan_before_bag",
+      "condition": [
+        {
+          "name": "scanned",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_bag",
+          "args": [
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "name": "checkout_ready",
+      "type": "derivation",
+      "body": "checkout_ready(x) ≡ scanned(x) ∧ bagged(x)"
+    },
+    {
+      "name": "restock_needed",
+      "type": "derivation",
+      "body": "restock_needed(shelf) ≡ ¬restocked(shelf) ∧ empty(shelf)"
+    }
+  ]
+}

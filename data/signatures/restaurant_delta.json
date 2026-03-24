@@ -1,0 +1,343 @@
+{
+  "S_t": {
+    "tray": "container",
+    "serving_plate": "container",
+    "teapot": "container",
+    "milk_tea_cup": "container",
+    "menu": "document",
+    "cutting_board": "surface",
+    "dough": "food",
+    "noodle": "food",
+    "salad": "food",
+    "straw": "tool",
+    "knife": "tool",
+    "ladle": "tool",
+    "feed_basket": "container"
+  },
+  "D_t": {},
+  "R_b": {
+    "cooked": {
+      "name": "cooked",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    },
+    "portioned": {
+      "name": "portioned",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    },
+    "served": {
+      "name": "served",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    },
+    "on_tray": {
+      "name": "on_tray",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "container"
+      ]
+    },
+    "sliced": {
+      "name": "sliced",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    },
+    "stirred": {
+      "name": "stirred",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    },
+    "kneaded": {
+      "name": "kneaded",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ]
+    }
+  },
+  "R_g": {
+    "temperature": {
+      "name": "temperature",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ],
+      "threshold": 0.5
+    },
+    "seasoned": {
+      "name": "seasoned",
+      "arity": 1,
+      "param_types": [
+        "food"
+      ],
+      "threshold": 0.5
+    }
+  },
+  "A_t": {
+    "chop": {
+      "name": "chop",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "sliced",
+          "args": [
+            "food"
+          ]
+        }
+      ]
+    },
+    "serve": {
+      "name": "serve",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "tray",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "on_tray",
+          "args": [
+            "food",
+            "tray"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "served",
+          "args": [
+            "food"
+          ]
+        }
+      ]
+    },
+    "knead": {
+      "name": "knead",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "food"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "kneaded",
+          "args": [
+            "food"
+          ]
+        }
+      ]
+    },
+    "roll_dough": {
+      "name": "roll_dough",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        },
+        {
+          "name": "kneaded",
+          "args": [
+            "food"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "hand_out": {
+      "name": "hand_out",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "cut": {
+      "name": "cut",
+      "parameters": [
+        {
+          "name": "food",
+          "type_name": "food"
+        },
+        {
+          "name": "tool",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "tool"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "sliced",
+          "args": [
+            "food"
+          ]
+        }
+      ]
+    }
+  },
+  "E_t": [],
+  "C_t": {
+    "hot_safety": {
+      "name": "hot_food_safety",
+      "condition": [
+        {
+          "name": "hot",
+          "args": [
+            "food"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_bare_touch",
+          "args": [
+            "food"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "cook_before_serve": {
+      "name": "cook_before_serve",
+      "condition": [
+        {
+          "name": "cooked",
+          "args": [
+            "food"
+          ],
+          "negated": true
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_serve",
+          "args": [
+            "food"
+          ],
+          "negated": true
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "name": "dish_ready",
+      "type": "derivation",
+      "body": "dish_ready(x) ≡ cooked(x) ∧ portioned(x)"
+    },
+    {
+      "name": "order_complete",
+      "type": "derivation",
+      "body": "order_complete(x) ≡ served(x)"
+    }
+  ]
+}

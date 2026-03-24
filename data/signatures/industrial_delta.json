@@ -1,0 +1,271 @@
+{
+  "S_t": {
+    "conveyor_belt": "surface",
+    "material_frame": "container",
+    "target_box": "container",
+    "logistics_box": "container",
+    "air_column_film": "tool",
+    "permanent_magnet": "object",
+    "medicine_box": "container",
+    "memory_module": "object",
+    "dumbbell": "object",
+    "storage_box_large": "container"
+  },
+  "D_t": {},
+  "R_b": {
+    "assembled": {
+      "name": "assembled",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "object"
+      ]
+    },
+    "calibrated": {
+      "name": "calibrated",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "packed": {
+      "name": "packed",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "on_belt": {
+      "name": "on_belt",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "surface"
+      ]
+    },
+    "sorted_into": {
+      "name": "sorted_into",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "container"
+      ]
+    },
+    "inserted": {
+      "name": "inserted",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "object"
+      ]
+    }
+  },
+  "R_g": {
+    "aligned": {
+      "name": "aligned",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "object"
+      ],
+      "threshold": 0.9
+    }
+  },
+  "A_t": {
+    "assemble": {
+      "name": "assemble",
+      "parameters": [
+        {
+          "name": "part",
+          "type_name": "object"
+        },
+        {
+          "name": "base",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "part"
+          ]
+        },
+        {
+          "name": "calibrated",
+          "args": [
+            "part"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "assembled",
+          "args": [
+            "part",
+            "base"
+          ]
+        }
+      ]
+    },
+    "pack": {
+      "name": "pack",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "box",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "packed",
+          "args": [
+            "obj"
+          ]
+        },
+        {
+          "name": "sorted_into",
+          "args": [
+            "obj",
+            "box"
+          ]
+        }
+      ]
+    },
+    "transport": {
+      "name": "transport",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "dst",
+          "type_name": "location"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "lift_heavy": {
+      "name": "lift_heavy",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ]
+    }
+  },
+  "E_t": [],
+  "C_t": {
+    "calibrate_before_assemble": {
+      "name": "calibrate_before_assemble",
+      "condition": [
+        {
+          "name": "calibrated",
+          "args": [
+            "part"
+          ],
+          "negated": true
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_assemble",
+          "args": [
+            "part"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "heavy_two_hand": {
+      "name": "heavy_two_hand",
+      "condition": [
+        {
+          "name": "heavy",
+          "args": [
+            "obj"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "require_two_hand",
+          "args": [
+            "obj"
+          ]
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "name": "assembly_ready",
+      "type": "derivation",
+      "body": "assembly_ready(x) ≡ calibrated(x) ∧ ¬assembled(x, _)"
+    },
+    {
+      "name": "logistics_complete",
+      "type": "derivation",
+      "body": "logistics_complete(x) ≡ packed(x) ∧ on_belt(x, belt)"
+    }
+  ]
+}

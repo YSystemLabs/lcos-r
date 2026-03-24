@@ -1,0 +1,111 @@
+{
+  "domain_pddl_lines": 169,
+  "plannable_rate": 1.0,
+  "total_tasks": 10,
+  "plannable_count": 10,
+  "total_planning_ms": 70.26,
+  "avg_planning_ms": 7.03,
+  "tasks": [
+    {
+      "task": "pick_cup_from_table",
+      "problem_lines": 14,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 3.46,
+      "plan": [
+        "grasp(cup_1, robot)"
+      ]
+    },
+    {
+      "task": "place_bowl_on_counter",
+      "problem_lines": 12,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 7.86,
+      "plan": [
+        "place(bowl_1, counter_1, robot)"
+      ]
+    },
+    {
+      "task": "open_fridge",
+      "problem_lines": 12,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 2.53,
+      "plan": [
+        "open(fridge_1, robot)"
+      ]
+    },
+    {
+      "task": "wipe_table",
+      "problem_lines": 13,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 1.4,
+      "plan": [
+        "brush(table_1, sponge_1, robot)"
+      ]
+    },
+    {
+      "task": "fold_shirt",
+      "problem_lines": 11,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 1.28,
+      "plan": [
+        "fold(shirt_1, robot)"
+      ]
+    },
+    {
+      "task": "close_drawer",
+      "problem_lines": 12,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 1.2,
+      "plan": [
+        "close(drawer_1, robot)"
+      ]
+    },
+    {
+      "task": "hang_towel",
+      "problem_lines": 12,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 3.7,
+      "plan": [
+        "hang(towel_1, robot, robot)"
+      ]
+    },
+    {
+      "task": "sweep_floor",
+      "problem_lines": 12,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 1.37,
+      "plan": [
+        "brush(floor_1, broom_1, robot)"
+      ]
+    },
+    {
+      "task": "press_microwave",
+      "problem_lines": 11,
+      "plannable": true,
+      "plan_length": 1,
+      "planning_ms": 3.27,
+      "plan": [
+        "press_button(microwave_1, robot)"
+      ]
+    },
+    {
+      "task": "pick_and_place_bottle",
+      "problem_lines": 14,
+      "plannable": true,
+      "plan_length": 2,
+      "planning_ms": 44.2,
+      "plan": [
+        "grasp(bottle_1, robot)",
+        "place(bottle_1, counter_1, robot)"
+      ]
+    }
+  ]
+}

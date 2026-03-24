@@ -1,0 +1,351 @@
+{
+  "S_t": {
+    "pen": "tool",
+    "pen_holder": "container",
+    "whiteboard": "surface",
+    "whiteboard_eraser": "tool",
+    "shredder": "appliance",
+    "printer": "appliance",
+    "tissue_box": "container",
+    "stamp": "tool",
+    "nameplate": "object",
+    "door": "object",
+    "door_lock": "object",
+    "reimbursement_form": "document",
+    "felt_bag": "container"
+  },
+  "D_t": {},
+  "R_b": {
+    "filed": {
+      "name": "filed",
+      "arity": 1,
+      "param_types": [
+        "document"
+      ]
+    },
+    "stamped": {
+      "name": "stamped",
+      "arity": 1,
+      "param_types": [
+        "document"
+      ]
+    },
+    "shredded": {
+      "name": "shredded",
+      "arity": 1,
+      "param_types": [
+        "document"
+      ]
+    },
+    "printed": {
+      "name": "printed",
+      "arity": 1,
+      "param_types": [
+        "document"
+      ]
+    },
+    "locked": {
+      "name": "locked",
+      "arity": 1,
+      "param_types": [
+        "object"
+      ]
+    },
+    "on_desk": {
+      "name": "on_desk",
+      "arity": 2,
+      "param_types": [
+        "object",
+        "surface"
+      ]
+    },
+    "in_holder": {
+      "name": "in_holder",
+      "arity": 2,
+      "param_types": [
+        "tool",
+        "container"
+      ]
+    }
+  },
+  "R_g": {
+    "confidential": {
+      "name": "confidential",
+      "arity": 1,
+      "param_types": [
+        "document"
+      ],
+      "threshold": 0.5
+    }
+  },
+  "A_t": {
+    "stamp_doc": {
+      "name": "stamp_doc",
+      "parameters": [
+        {
+          "name": "doc",
+          "type_name": "document"
+        },
+        {
+          "name": "stamp",
+          "type_name": "tool"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "stamp"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "stamped",
+          "args": [
+            "doc"
+          ]
+        }
+      ]
+    },
+    "shred": {
+      "name": "shred",
+      "parameters": [
+        {
+          "name": "doc",
+          "type_name": "document"
+        },
+        {
+          "name": "shredder",
+          "type_name": "appliance"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "shredder"
+          ]
+        },
+        {
+          "name": "powered_on",
+          "args": [
+            "shredder"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "shredded",
+          "args": [
+            "doc"
+          ]
+        }
+      ]
+    },
+    "print_doc": {
+      "name": "print_doc",
+      "parameters": [
+        {
+          "name": "doc",
+          "type_name": "document"
+        },
+        {
+          "name": "printer",
+          "type_name": "appliance"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "printer"
+          ]
+        },
+        {
+          "name": "powered_on",
+          "args": [
+            "printer"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "printed",
+          "args": [
+            "doc"
+          ]
+        }
+      ]
+    },
+    "file": {
+      "name": "file",
+      "parameters": [
+        {
+          "name": "doc",
+          "type_name": "document"
+        },
+        {
+          "name": "box",
+          "type_name": "container"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "doc"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "filed",
+          "args": [
+            "doc"
+          ]
+        },
+        {
+          "name": "in_holder",
+          "args": [
+            "doc",
+            "box"
+          ]
+        }
+      ]
+    },
+    "turn_key": {
+      "name": "turn_key",
+      "parameters": [
+        {
+          "name": "key",
+          "type_name": "object"
+        },
+        {
+          "name": "lock",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "holding",
+          "args": [
+            "agent",
+            "key"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "locked",
+          "args": [
+            "lock"
+          ],
+          "negated": true
+        }
+      ]
+    },
+    "slide": {
+      "name": "slide",
+      "parameters": [
+        {
+          "name": "obj",
+          "type_name": "object"
+        },
+        {
+          "name": "agent",
+          "type_name": "agent"
+        }
+      ],
+      "preconditions": [
+        {
+          "name": "reachable",
+          "args": [
+            "agent",
+            "obj"
+          ]
+        }
+      ],
+      "effects": []
+    }
+  },
+  "E_t": [],
+  "C_t": {
+    "confidential_shred": {
+      "name": "confidential_shred",
+      "condition": [
+        {
+          "name": "confidential",
+          "args": [
+            "doc"
+          ]
+        }
+      ],
+      "consequence": [
+        {
+          "name": "require_shred",
+          "args": [
+            "doc"
+          ]
+        }
+      ]
+    },
+    "file_order": {
+      "name": "file_order",
+      "condition": [
+        {
+          "name": "stamped",
+          "args": [
+            "doc"
+          ],
+          "negated": true
+        }
+      ],
+      "consequence": [
+        {
+          "name": "allow_file",
+          "args": [
+            "doc"
+          ],
+          "negated": true
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "name": "doc_processed",
+      "type": "derivation",
+      "body": "doc_processed(x) ≡ stamped(x) ∧ filed(x)"
+    },
+    {
+      "name": "room_secured",
+      "type": "derivation",
+      "body": "room_secured(room) ≡ locked(room) ∧ ¬powered_on(light)"
+    }
+  ]
+}
