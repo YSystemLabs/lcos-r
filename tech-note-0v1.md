@@ -336,7 +336,9 @@ $$ \Pr(\text{violates } \mathcal{C}_\star \mid b_t, a) \le \delta $$
 
 不直接用三值吃掉，而是保留 $(\mu, \sigma)$ 。决策时通过规则投影，例如：
 
-$$ \mathrm{safe\_to\_touch}(x) = \mathbf{1}\big[\mu_{\mathrm{hot}}(x) \le \eta_h \;\land\; \sigma_{\mathrm{hot}}(x) \le \eta_u\big] $$
+$$ 
+\mathrm{safe\_to\_touch}(x) = \mathbf{1}\big[\mu_{\mathrm{hot}}(x) \le \eta_h \;\land\; \sigma_{\mathrm{hot}}(x) \le \eta_u\big] 
+$$
 
 这样：程度性概念保留程度值，认识不确定性单独保留，决策层再统一处理。
 
@@ -433,7 +435,7 @@ $\equiv_t$ 是真正的等价关系（满足自反性、对称性、传递性）
 
 $$ c \sim_{\varepsilon,t} c' \iff \forall q \in Q_t,\ |q(c)-q(c')| \le \varepsilon_q $$
 
-**警告**： $\sim_{\varepsilon,t}$ **不满足传递性**——$c \sim_{\varepsilon,t} c'$ 且 $c' \sim_{\varepsilon,t} c''$ 不能推出 $c \sim_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon_q$ 的累积偏差）。因此 $\sim_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导**$\varepsilon$-邻域**。
+**警告**： $\sim_{\varepsilon,t}$ **不满足传递性** —— $c \sim_{\varepsilon,t} c'$ 且 $c' \sim_{\varepsilon,t} c''$ 不能推出 $c \sim_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon_q$ 的累积偏差）。因此 $\sim_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导**$\varepsilon$-邻域**。
 
 在后续讨论中：
 
@@ -482,9 +484,16 @@ $$ (c_t, x) \rightsquigarrow (c_t[x \leftarrow x'], x') $$
 
 #### A. Core-Preserving Rewrite
 
-$$ x \rightsquigarrow_s x' $$
+$$ 
+x \rightsquigarrow_s x' 
+$$
+
 若满足：
-$$ \forall q\in Q_\star,\ q(c_t)=q(c_t[x \leftarrow x']) $$
+
+$$ 
+\forall q\in Q_\star,\ q(c_t)=q(c_t[x \leftarrow x']) 
+$$
+
 其中 $Q_\star$ 是核心测试集。
 
 适用于：
@@ -498,9 +507,15 @@ $$ \forall q\in Q_\star,\ q(c_t)=q(c_t[x \leftarrow x']) $$
 
 #### B. Task-Preserving Rewrite
 
-$$ x \rightsquigarrow_\tau x' $$
+$$ 
+x \rightsquigarrow_\tau x' 
+$$
+
 若满足：
-$$ \forall q\in Q_t^{task},\ q(c_t)=q(c_t[x \leftarrow x']) $$
+
+$$ 
+\forall q\in Q_t^{task},\ q(c_t)=q(c_t[x \leftarrow x']) 
+$$
 
 适用于：
 
@@ -511,10 +526,15 @@ $$ \forall q\in Q_t^{task},\ q(c_t)=q(c_t[x \leftarrow x']) $$
 
 #### C. Risk-Bounded Approximate Rewrite
 
-$$ x \rightsquigarrow_\epsilon x' $$
+$$ 
+x \rightsquigarrow_\epsilon x' 
+$$
+
 若满足核心测试严格不变，同时非核心测试误差有界：
 
-$$ \forall q \in Q_\star,\; q(c_t) = q(c_t[x \leftarrow x']) \qquad \text{且} \qquad \forall q \in Q_t \setminus Q_\star,\; |q(c_t)-q(c_t[x \leftarrow x'])| \le \varepsilon_q $$
+$$ 
+\forall q \in Q_\star,\; q(c_t) = q(c_t[x \leftarrow x']) \qquad \text{且} \qquad \forall q \in Q_t \setminus Q_\star,\; |q(c_t)-q(c_t[x \leftarrow x'])| \le \varepsilon_q 
+$$
 
 适用于：
 
@@ -529,7 +549,9 @@ $$ \forall q \in Q_\star,\; q(c_t) = q(c_t[x \leftarrow x']) \qquad \text{且} \
 
 1. **总误差上界**：为每个测试 $q$ 设定总容许漂移 $E_q$ ，即无论经过多少轮近似 rewrite，相对于初始配置 $c_0$ 的累积偏差不得超过 $E_q$ ：
 
-   $$ |q(c_0) - q(c_n)| \le E_q $$
+$$ 
+|q(c_0) - q(c_n)| \le E_q 
+$$
 
 2. **单轮预算分配**：若预计最多执行 $N$ 轮近似 rewrite，则每轮容差为 $\varepsilon_q \le E_q / N$ （均匀分配）。注意均匀分配可能过度保守——不同轮次的 rewrite 对不同测试的影响不同，有些轮可能根本不影响某个测试。更精细的策略是**自适应分配**：先估计每轮 rewrite 影响的测试子集 $Q_q^{\text{affected}} \subseteq Q_t$ ，只在受影响的测试上扣减预算，不受影响的测试预算保留。第一版实验先用均匀分配建立 baseline，后续可切换到自适应分配。
 
@@ -547,7 +569,7 @@ $$ \forall q \in Q_\star,\; q(c_t) = q(c_t[x \leftarrow x']) \qquad \text{且} \
 
 - 若替换前后的**系统配置**在精确等价 $\equiv_t$ 下属于同一等价类，则它是 **exact rewrite**
 - 若替换前后在容差近似 $\sim_{\varepsilon,t}$ 下属于同一 $\varepsilon$-邻域（但不精确等价），则它是 **approximate rewrite**
-- 若执行动作后系统配置跨出了当前等价类/$\varepsilon$-邻域，则它是 **dynamics**
+- 若执行动作后系统配置跨出了当前等价类/ $\varepsilon$-邻域，则它是 **dynamics**
 
 换句话说：
 
