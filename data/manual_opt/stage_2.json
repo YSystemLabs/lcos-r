@@ -1,0 +1,9 @@
+{
+  "predicate_merges": [
+    ["on_belt", "on"],
+    ["sorted_into", "in"]
+  ],
+  "rule_folds": [
+    "assembly_ready+checkout_ready"
+  ]
+}

@@ -8,7 +8,7 @@ import time
 from typing import Dict, List, Optional, Tuple
 
 from src.core import SemanticSignature
-from src.core.test_suite import run_q_star, TestSuiteResult
+from src.core.test_suite import run_q_star, run_q_task, TestSuiteResult
 from src.rewrite import pass1_predicate_elimination, pass2_rule_folding, pass3_object_pruning
 
 
@@ -57,12 +57,14 @@ def run_task_pruning(
     执行 Pass 3（Task-Preserving），per-task。
     """
     sigma_p3, stats_p3 = pass3_object_pruning.apply(sigma, task)
-    q_result = run_q_star(sigma_p3)
+    q_result = run_q_task(sigma_p3, [task], include_coverage=False)
+    stats_p3["q_task_pass_rate"] = q_result.pass_rate
     if q_result.failed == 0:
         stats_p3["verified"] = True
         return sigma_p3, stats_p3
     else:
         stats_p3["verified"] = False
+        stats_p3["failed_tests"] = [r.name for r in q_result.results if not r.passed]
         return sigma, stats_p3  # 回滚
 
 

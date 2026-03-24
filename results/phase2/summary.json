@@ -140,7 +140,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 50001
   },
   {
@@ -156,7 +156,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 200001
   },
   {
@@ -172,7 +172,7 @@
     "total_complexity": 107,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 50001
   },
   {
@@ -188,7 +188,7 @@
     "total_complexity": 107,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 200001
   },
   {
@@ -202,10 +202,10 @@
     "pddl_lines": 255,
     "type_count": 81,
     "total_complexity": 100,
-    "plannable_rate": 0.8462,
-    "plannable_count": 11,
-    "total_tasks": 13,
-    "avg_nodes": 29778
+    "plannable_rate": 0.8,
+    "plannable_count": 16,
+    "total_tasks": 20,
+    "avg_nodes": 26352
   },
   {
     "stage": 3,
@@ -219,9 +219,9 @@
     "type_count": 81,
     "total_complexity": 100,
     "plannable_rate": 1.0,
-    "plannable_count": 13,
-    "total_tasks": 13,
-    "avg_nodes": 34464
+    "plannable_count": 20,
+    "total_tasks": 20,
+    "avg_nodes": 32519
   },
   {
     "stage": 3,
@@ -234,10 +234,10 @@
     "pddl_lines": 255,
     "type_count": 81,
     "total_complexity": 99,
-    "plannable_rate": 0.8462,
-    "plannable_count": 11,
-    "total_tasks": 13,
-    "avg_nodes": 29778
+    "plannable_rate": 0.8,
+    "plannable_count": 16,
+    "total_tasks": 20,
+    "avg_nodes": 26352
   },
   {
     "stage": 3,
@@ -251,9 +251,9 @@
     "type_count": 81,
     "total_complexity": 99,
     "plannable_rate": 1.0,
-    "plannable_count": 13,
-    "total_tasks": 13,
-    "avg_nodes": 34464
+    "plannable_count": 20,
+    "total_tasks": 20,
+    "avg_nodes": 32519
   },
   {
     "stage": 4,
@@ -268,7 +268,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 50001
   },
   {
@@ -284,7 +284,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 200001
   },
   {
@@ -300,7 +300,7 @@
     "total_complexity": 125,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 50001
   },
   {
@@ -316,7 +316,7 @@
     "total_complexity": 125,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 200001
   },
   {
@@ -330,10 +330,10 @@
     "pddl_lines": 291,
     "type_count": 94,
     "total_complexity": 115,
-    "plannable_rate": 0.8333,
-    "plannable_count": 15,
-    "total_tasks": 18,
-    "avg_nodes": 34391
+    "plannable_rate": 0.7667,
+    "plannable_count": 23,
+    "total_tasks": 30,
+    "avg_nodes": 29503
   },
   {
     "stage": 4,
@@ -347,9 +347,9 @@
     "type_count": 94,
     "total_complexity": 115,
     "plannable_rate": 1.0,
-    "plannable_count": 18,
-    "total_tasks": 18,
-    "avg_nodes": 46981
+    "plannable_count": 30,
+    "total_tasks": 30,
+    "avg_nodes": 42122
   },
   {
     "stage": 4,
@@ -362,10 +362,10 @@
     "pddl_lines": 291,
     "type_count": 94,
     "total_complexity": 114,
-    "plannable_rate": 0.8333,
-    "plannable_count": 15,
-    "total_tasks": 18,
-    "avg_nodes": 34391
+    "plannable_rate": 0.7667,
+    "plannable_count": 23,
+    "total_tasks": 30,
+    "avg_nodes": 29503
   },
   {
     "stage": 4,
@@ -379,8 +379,8 @@
     "type_count": 94,
     "total_complexity": 114,
     "plannable_rate": 1.0,
-    "plannable_count": 18,
-    "total_tasks": 18,
-    "avg_nodes": 46981
+    "plannable_count": 30,
+    "total_tasks": 30,
+    "avg_nodes": 42122
   }
 ]

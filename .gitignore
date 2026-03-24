@@ -5,5 +5,14 @@ data/agibot-world/extraction_report.txt
 data/agibot-world/signature_extraction.json
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.DS_Store
 results/raw/
 results/pilot/

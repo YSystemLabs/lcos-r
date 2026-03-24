@@ -156,6 +156,25 @@ def t0_constraint_references(sigma: SemanticSignature) -> TestResult:
                       "; ".join(issues[:5]) if issues else "ok")
 
 
+def t0_action_references_declared_predicates(sigma: SemanticSignature) -> TestResult:
+    """动作前提和效果中引用的谓词都必须已声明。"""
+    t = time.time()
+    declared = sigma.predicate_names()
+    issues = []
+    for aname, act in sigma.A_t.items():
+        for pred in act.preconditions + act.effects:
+            if pred.name not in declared:
+                issues.append(f"action '{aname}': unknown pred '{pred.name}'")
+    elapsed = (time.time() - t) * 1000
+    return TestResult(
+        "action_references_declared_predicates",
+        len(issues) == 0,
+        "T0",
+        elapsed,
+        "; ".join(issues[:5]) if issues else "ok",
+    )
+
+
 # ══════════════════════════════════════════════════
 # T1 中等测试
 # ══════════════════════════════════════════════════
@@ -261,6 +280,7 @@ def run_q_star(sigma: SemanticSignature) -> TestSuiteResult:
     result.results.append(t0_pddl_parseable(sigma))
     result.results.append(t0_no_duplicate_predicates(sigma))
     result.results.append(t0_constraint_references(sigma))
+    result.results.append(t0_action_references_declared_predicates(sigma))
     # 关键 T1
     result.results.append(t1_action_param_types_in_hierarchy(sigma))
     result.results.append(t1_symmetry_open_close(sigma))
@@ -268,13 +288,14 @@ def run_q_star(sigma: SemanticSignature) -> TestSuiteResult:
     return result
 
 
-def run_q_task(sigma: SemanticSignature, tasks: List[Dict]) -> TestSuiteResult:
+def run_q_task(sigma: SemanticSignature, tasks: List[Dict], include_coverage: bool = True) -> TestSuiteResult:
     """
     Q_task: 当前领域任务测试。
     包含 Q_star + T2 可规划性测试。
     """
     result = run_q_star(sigma)
-    result.results.append(t1_predicate_coverage(sigma))
+    if include_coverage:
+        result.results.append(t1_predicate_coverage(sigma))
     # T2: 对每个任务测试可规划性
     for task in tasks:
         r = t2_plannable(sigma, task["objects"], task["init"], task["goal"])

@@ -1,4 +1,4 @@
-# LCOS-R Phase1实验分析报告
+# LCOS-R 实验分析报告
 
 ## 1. 实验概况
 - 实验阶段: 5 (S0-S4, 五领域渐进扩展)
@@ -16,13 +16,18 @@
 - **Baseline S4 可规划率**: 0% (因缺乏新领域词汇)
 - **Expand+Rewrite S4 可规划率**: 100%
 
-### 2.2 统计显著性
+### 2.2 验证强度
+- **Q_star 核心测试数**: 10
+- **Q_task 测试总数**: 41 (30 个任务时为 10 项核心测试 + 1 项覆盖测试 + 30 项可规划性测试)
+- **Pass 3 逐任务验证率**: 100% (S1-S4 的 Expand+Rewrite 均通过)
+
+### 2.3 统计显著性
 - 配对 t 检验 p = 0.0248
 - Expand-Only 平均复杂度: 98.2
 - Expand+Rewrite 平均复杂度: 92.0
 - 平均削减: 6.2
 
-### 2.3 Rewrite 效果分解
+### 2.4 Rewrite 效果分解
 - **Pass 1 (谓词消除)**: 每阶段消除 2 个同义谓词
 - **Pass 2 (规则折叠)**: 每阶段折叠 1 条同构规则
 - **Pass 3 (对象裁剪)**: per-task 裁剪无关领域类型
@@ -31,26 +36,26 @@
 
 | Stage | System | Predicates | Rules | Complexity | Plannable | Avg Plan Time |
 |-------|--------|-----------|-------|-----------|-----------|--------------|
-| S0 | Baseline | 25 | 4 | 59 | 100% | 7.3ms |
-| S0 | Expand-Only | 25 | 4 | 59 | 100% | 7.2ms |
-| S0 | Expand+Rewrite | 25 | 4 | 59 | 100% | 7.2ms |
-| S0 | Expand+ManualOpt | 25 | 4 | 59 | 100% | 7.2ms |
-| S1 | Baseline | 25 | 4 | 59 | 0% | 156.8ms |
-| S1 | Expand-Only | 32 | 6 | 73 | 100% | 7.2ms |
-| S1 | Expand+Rewrite | 30 | 5 | 70 | 100% | 6.7ms |
-| S1 | Expand+ManualOpt | 30 | 5 | 70 | 100% | 6.7ms |
-| S2 | Baseline | 25 | 4 | 59 | 50% | 77.9ms |
-| S2 | Expand-Only | 39 | 8 | 88 | 100% | 5.1ms |
-| S2 | Expand+Rewrite | 35 | 7 | 83 | 100% | 5.1ms |
-| S2 | Expand+ManualOpt | 35 | 6 | 82 | 100% | 5.0ms |
-| S3 | Baseline | 25 | 4 | 59 | 0% | 109.2ms |
-| S3 | Expand-Only | 48 | 10 | 107 | 100% | 7.7ms |
-| S3 | Expand+Rewrite | 43 | 8 | 100 | 100% | 7.6ms |
-| S3 | Expand+ManualOpt | 43 | 7 | 99 | 100% | 7.8ms |
-| S4 | Baseline | 25 | 4 | 59 | 0% | 157.4ms |
-| S4 | Expand-Only | 56 | 12 | 125 | 100% | 17.5ms |
-| S4 | Expand+Rewrite | 49 | 9 | 115 | 100% | 16.7ms |
-| S4 | Expand+ManualOpt | 49 | 8 | 114 | 100% | 18.6ms |
+| S0 | Baseline | 25 | 4 | 59 | 100% | 7.0ms |
+| S0 | Expand-Only | 25 | 4 | 59 | 100% | 7.1ms |
+| S0 | Expand+Rewrite | 25 | 4 | 59 | 100% | 7.3ms |
+| S0 | Expand+ManualOpt | 25 | 4 | 59 | 100% | 6.9ms |
+| S1 | Baseline | 25 | 4 | 59 | 0% | 154.9ms |
+| S1 | Expand-Only | 32 | 6 | 73 | 100% | 7.4ms |
+| S1 | Expand+Rewrite | 30 | 5 | 70 | 100% | 7.4ms |
+| S1 | Expand+ManualOpt | 30 | 5 | 70 | 100% | 6.8ms |
+| S2 | Baseline | 25 | 4 | 59 | 50% | 78.9ms |
+| S2 | Expand-Only | 39 | 8 | 88 | 100% | 5.7ms |
+| S2 | Expand+Rewrite | 35 | 7 | 83 | 100% | 5.2ms |
+| S2 | Expand+ManualOpt | 35 | 6 | 82 | 100% | 5.2ms |
+| S3 | Baseline | 25 | 4 | 59 | 0% | 112.3ms |
+| S3 | Expand-Only | 48 | 10 | 107 | 100% | 7.8ms |
+| S3 | Expand+Rewrite | 43 | 8 | 100 | 100% | 7.7ms |
+| S3 | Expand+ManualOpt | 43 | 7 | 99 | 100% | 8.1ms |
+| S4 | Baseline | 25 | 4 | 59 | 0% | 159.4ms |
+| S4 | Expand-Only | 56 | 12 | 125 | 100% | 16.7ms |
+| S4 | Expand+Rewrite | 49 | 9 | 115 | 100% | 17.0ms |
+| S4 | Expand+ManualOpt | 49 | 8 | 114 | 100% | 16.8ms |
 
 ## 4. 图表
 - Fig 1: [复杂度曲线](figures/fig1_complexity.png)

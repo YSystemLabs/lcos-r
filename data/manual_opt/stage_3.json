@@ -1,0 +1,8 @@
+{
+  "predicate_merges": [
+    ["on_tray", "on"]
+  ],
+  "rule_folds": [
+    "dish_ready+logistics_complete"
+  ]
+}

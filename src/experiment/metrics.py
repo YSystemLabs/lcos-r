@@ -52,7 +52,7 @@ def collect_planning_metrics(sigma: SemanticSignature, task: Dict,
 def collect_verification_metrics(sigma: SemanticSignature, tasks: List[Dict]) -> Dict:
     """Q_star/Q_task 通过率。"""
     q_star = run_q_star(sigma)
-    q_task = run_q_task(sigma, tasks[:5])  # 限制任务数避免过慢
+    q_task = run_q_task(sigma, tasks)
     return {
         "q_star_pass_rate": round(q_star.pass_rate, 4),
         "q_task_pass_rate": round(q_task.pass_rate, 4),

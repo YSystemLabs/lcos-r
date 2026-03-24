@@ -31,9 +31,22 @@ def _find_relevant_types(sigma: SemanticSignature, task: Dict) -> Set[str]:
     return relevant
 
 
-def _find_relevant_predicates(sigma: SemanticSignature, relevant_types: Set[str]) -> Set[str]:
+def _task_predicate_names(task: Dict) -> Set[str]:
+    """收集任务初始状态与目标中直接出现的谓词名。"""
+    names = set()
+    for fact in task.get("init", []) + task.get("goal", []):
+        names.add(fact.name)
+    return names
+
+
+def _find_relevant_predicates(
+    sigma: SemanticSignature,
+    relevant_types: Set[str],
+    relevant_actions: Set[str],
+    task: Dict,
+) -> Set[str]:
     """找到与相关类型关联的谓词。"""
-    relevant_preds = set()
+    relevant_preds = _task_predicate_names(task)
     for name, bp in sigma.R_b.items():
         # 如果谓词参数类型与相关类型有交集
         if any(pt in relevant_types or pt == "object" for pt in bp.param_types):
@@ -41,6 +54,10 @@ def _find_relevant_predicates(sigma: SemanticSignature, relevant_types: Set[str]
     for name, gp in sigma.R_g.items():
         if any(pt in relevant_types or pt == "object" for pt in gp.param_types):
             relevant_preds.add(name)
+    for aname in relevant_actions:
+        act = sigma.A_t[aname]
+        for pred in act.preconditions + act.effects:
+            relevant_preds.add(pred.name)
     return relevant_preds
 
 
@@ -64,8 +81,8 @@ def apply(sigma: SemanticSignature, task: Dict) -> Tuple[SemanticSignature, Dict
     sigma_new = copy.deepcopy(sigma)
 
     relevant_types = _find_relevant_types(sigma_new, task)
-    relevant_preds = _find_relevant_predicates(sigma_new, relevant_types)
     relevant_actions = _find_relevant_actions(sigma_new, relevant_types)
+    relevant_preds = _find_relevant_predicates(sigma_new, relevant_types, relevant_actions, task)
 
     # 统计裁剪前
     types_before = len(sigma_new.S_t)

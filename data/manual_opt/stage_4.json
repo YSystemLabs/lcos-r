@@ -1,0 +1,9 @@
+{
+  "predicate_merges": [
+    ["on_desk", "on"],
+    ["in_holder", "in"]
+  ],
+  "rule_folds": [
+    "doc_processed+dish_ready"
+  ]
+}

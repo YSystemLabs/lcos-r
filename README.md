@@ -22,13 +22,13 @@ LCOS-R（Local Compiled Open Semantics — Rewrite）是一个最小参考语义
 
 ### 二阶段：跨域可规划性保护
 
-18 个跨域组合任务，利用同义谓词歧义：
+30 个跨域组合任务，覆盖当前已实现的 A/B/C 三类跨域失败模式：
 
 | 指标 | Expand-Only | Expand+Rewrite | p 值 |
 |------|-------------|----------------|------|
-| S4 可规划率 | **0%** | **100%** | 7.63×10⁻⁶ |
-| 中位 BFS 节点 | 200,001（全超限） | 40,697 | — |
-| 搜索代价节省 | — | 76.5% | — |
+| S4 relaxed 可规划率 | **0% (0/30)** | **100% (30/30)** | 1.86×10⁻⁹ |
+| S4 standard 可规划率 | **0% (0/30)** | 77% (23/30) | — |
+| 中位 BFS 节点 | 200,001（全超限） | 40,051 | — |
 
 ## 项目结构
 
@@ -62,7 +62,7 @@ lcos-r/
 │   ├── pddl_test/                # PDDL 测试用例
 │   └── agibot-world/             # AgiBot World 任务数据
 └── results/
-    ├── analysis.md               # 一阶段分析报告
+    ├── phase1_analysis.md        # 一阶段分析报告
     ├── phase2_analysis.md        # 二阶段分析报告
     ├── figures/                  # 9 张实验图表 (fig1-fig9)
     ├── raw/                      # 一阶段原始结果
@@ -115,17 +115,18 @@ python3 scripts/test_pddl.py
 当前实验验证了核心 thesis 的**必要条件**，但非充分验证：
 
 - ✅ 纯扩展导致复杂度线性增长（112%），rewrite 显著抑制（p=0.0248）
-- ✅ 跨域任务下纯扩展可规划率退化至 0%，rewrite 恢复至 100%（p=7.63×10⁻⁶）
+- ✅ 当前 30 个跨域 A/B/C 任务下纯扩展可规划率退化至 0%，rewrite 恢复至 100%（p=1.86×10⁻⁹）
 - ✅ 自动 rewrite 与人工优化效果一致
 - ⚠️ 跨域任务为反向设计，不代表自然任务分布
-- ⚠️ 仅覆盖 Type A 失败模式（同义谓词不可达）
+- ⚠️ Type B 当前是动作前置条件接续失败，不是显式约束冲突
+- ⚠️ Type C 当前是高干扰单目标压力任务，不是真正的多目标深链
 - ⚠️ 5 域 / 125 复杂度规模有限，更大规模可扩展性未知
 - ⚠️ 实验在 PDDL 符号层，未涉及物理执行
 
 ## 文档
 
 - [tech-note-0v1.md](tech-note-0v1.md) — 技术文档（术语、形式化定义、实验设计）
-- [results/analysis.md](results/phase1_analysis.md) — 一阶段实验分析报告
+- [results/phase1_analysis.md](results/phase1_analysis.md) — 一阶段实验分析报告
 - [results/phase2_analysis.md](results/phase2_analysis.md) — 二阶段实验分析报告
 - [ROADMAP-phase1.md](ROADMAP-phase1.md) — 一阶段路线图（已完成）
 - [ROADMAP-phase2.md](ROADMAP-phase2.md) — 二阶段路线图（已完成）

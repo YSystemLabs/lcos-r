@@ -32,6 +32,7 @@
     (stacked ?p0 - object ?p1 - object)
     (fragile ?p0 - object)
     (full ?p0 - container)
+    (heavy ?p0 - object)
     (hot ?p0 - object)
     (wet ?p0 - object)
     (wrinkled ?p0 - clothing)

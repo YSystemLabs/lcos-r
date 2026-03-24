@@ -84,7 +84,7 @@ def fig8_nodes_boxplot(full):
             eo_nodes = [t["nodes_explored"] for t in r["task_results"]]
 
     fig, ax = plt.subplots(figsize=(6, 5))
-    bp = ax.boxplot([eo_nodes, er_nodes], labels=["Expand-Only", "Expand+Rewrite"],
+    bp = ax.boxplot([eo_nodes, er_nodes], tick_labels=["Expand-Only", "Expand+Rewrite"],
                     patch_artist=True, widths=0.5)
     bp["boxes"][0].set_facecolor(COLORS["Expand-Only"])
     bp["boxes"][1].set_facecolor(COLORS["Expand+Rewrite"])
@@ -188,7 +188,7 @@ def statistical_tests(full):
     print(f"  EO fail           {c:3d}      {d:3d}")
 
     # McNemar test (exact binomial)
-    from math import comb, factorial
+    from math import comb
     discordant = b + c
     if discordant > 0:
         # Under H0: b ~ Binomial(b+c, 0.5)
@@ -225,7 +225,7 @@ def statistical_tests(full):
     print(f"  95% CI: [{ci_lo:.4f}, {ci_hi:.4f}]")
 
     stats = {
-        "mcnemar_p": round(p_mcnemar, 6),
+        "mcnemar_p": p_mcnemar,
         "eo_plannable_rate": round(eo_pass / n, 4),
         "er_plannable_rate": round(er_pass / n, 4),
         "risk_difference": round(diff, 4),
@@ -241,6 +241,31 @@ def generate_report(summary, full, stats):
     """生成 markdown 分析报告。"""
     report = ["# Phase 2 Analysis: Cross-Domain Tasks\n"]
 
+    stage_rows = [r for r in summary if r["system"] == "Expand+Rewrite" and r["bfs_config"] == "relaxed"]
+    stage_rows = sorted(stage_rows, key=lambda r: r["stage"])
+    stage_counts = {r["stage"]: r["total_tasks"] for r in stage_rows}
+
+    stage4_er = next(r for r in full
+                     if r["stage"] == 4 and r["system"] == "Expand+Rewrite"
+                     and r["bfs_config"] == "relaxed")
+    degrade_counts = {}
+    for task in stage4_er["task_results"]:
+        degrade_counts[task["degrade_type"]] = degrade_counts.get(task["degrade_type"], 0) + 1
+
+    stage4_standard = next(r for r in summary
+                           if r["stage"] == 4 and r["system"] == "Expand+Rewrite"
+                           and r["bfs_config"] == "standard")
+    stage4_relaxed = next(r for r in summary
+                          if r["stage"] == 4 and r["system"] == "Expand+Rewrite"
+                          and r["bfs_config"] == "relaxed")
+
+    report.append("## Audit Scope\n")
+    report.append("- 当前实现覆盖 30 个跨域组合任务，其中 Stage 4 为 18 个 Type A、6 个 Type B、6 个 Type C。")
+    report.append(f"- 任务按最小所需域逐级开放，因此 S2/S3/S4 的实际任务数分别为 {stage_counts.get(2, 0)}/{stage_counts.get(3, 0)}/{stage_counts.get(4, 0)}。")
+    report.append("- 二阶段实验由 scripts/run_phase2.py 独立执行，结果写入 results/phase2/，分析报告写入 results/phase2_analysis.md。")
+    report.append("- Type B 当前实现为动作前置条件接续失败；Type C 当前实现为高干扰单目标搜索压力任务，而不是多目标深链。")
+    report.append("")
+
     # Summary table
     report.append("## Plannable Rate Summary\n")
     report.append("| Stage | System | BFS Config | Plannable | Rate |")
@@ -255,11 +280,13 @@ def generate_report(summary, full, stats):
     report.append(f"- **EO plannable rate**: {stats.get('eo_plannable_rate', 0):.0%} "
                   f"(all {stats.get('n_tasks', 0)} cross-domain tasks fail)")
     report.append(f"- **ER plannable rate**: {stats.get('er_plannable_rate', 0):.0%} "
-                  f"(synonym gap eliminated by rewrite)")
+                  f"(alias and precondition handoff gaps eliminated by rewrite)")
     report.append(f"- **McNemar p-value**: {stats.get('mcnemar_p', 1):.2e}")
     report.append(f"- **Risk difference**: {stats.get('risk_difference', 0):.4f} "
                   f"(95% CI: [{stats.get('ci_95_lower', 0):.4f}, "
                   f"{stats.get('ci_95_upper', 0):.4f}])")
+    report.append(f"- **Coverage**: Stage 4 includes A/B/C = {degrade_counts.get('A', 0)}/{degrade_counts.get('B', 0)}/{degrade_counts.get('C', 0)}.")
+    report.append(f"- **BFS budget effect**: Stage 4 下 ER 从 standard 的 {stage4_standard['plannable_rate']:.0%} 提升到 relaxed 的 {stage4_relaxed['plannable_rate']:.0%}，EO 在两组预算下均为 0%。")
     report.append("")
 
     # Per-task details

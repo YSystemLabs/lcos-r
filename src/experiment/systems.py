@@ -29,32 +29,19 @@ def load_deltas() -> List[SemanticSignature]:
             for d in DELTA_DOMAINS]
 
 
-# ── 手动优化配置 ──
-# 每阶段人工指定的谓词合并/规则折叠/对象裁剪
-MANUAL_OPT_CONFIG = {
-    1: {  # +retail
-        "predicate_merges": [("on_shelf", "on"), ("in_cart", "in")],
-        "rule_folds": ["checkout_ready+laundry_ready"],  # 同结构折叠
-    },
-    2: {  # +industrial
-        "predicate_merges": [("on_belt", "on"), ("sorted_into", "in")],
-        "rule_folds": ["assembly_ready+checkout_ready"],
-    },
-    3: {  # +restaurant
-        "predicate_merges": [("on_tray", "on")],
-        "rule_folds": ["dish_ready+logistics_complete"],
-    },
-    4: {  # +office
-        "predicate_merges": [("on_desk", "on"), ("in_holder", "in")],
-        "rule_folds": ["doc_processed+dish_ready"],
-    },
-}
+def load_manual_opt_config(stage: int) -> Dict:
+    """从 data/manual_opt 加载可审计的阶段化手动优化配置。"""
+    config_path = MANUAL_OPT_DIR / f"stage_{stage}.json"
+    if not config_path.exists():
+        return {}
+    with open(config_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def apply_manual_opt(sigma: SemanticSignature, stage: int) -> SemanticSignature:
     """应用手动优化配置。"""
     sigma_new = copy.deepcopy(sigma)
-    config = MANUAL_OPT_CONFIG.get(stage, {})
+    config = load_manual_opt_config(stage)
 
     for old, new in config.get("predicate_merges", []):
         sigma_new.replace_predicate(old, new)
@@ -239,6 +226,10 @@ def generate_domain_tasks(domain: str, n: int = 30) -> List[Dict]:
 # ── 跨域组合任务 ──
 # 设计原则：利用 synonym predicate 的歧义使 Expand-Only 不可规划
 #
+# Type A: 目标谓词不可达（goal-side synonym gap）
+# Type B: 中间动作前置条件无法接续（precondition handoff gap）
+# Type C: 多对象深链 + 多重别名断裂（deep chained composition）
+#
 # 关键机制：
 # - EO 中 place(obj, tray) 产生 on(obj, tray)，但 serve 需要 on_tray(obj, tray) → 匹配失败
 # - EO 中没有动作产生 on_desk/on_belt/on_tray/in_cart → 这些作为 goal 不可达
@@ -385,13 +376,113 @@ CROSS_DOMAIN_TEMPLATES = [
      [("reachable", ["robot", "module_1"]), ("clear", ["module_1"])],
      [("on_tray", ["module_1", "tray_1"])],
      "A", ["industrial", "domestic", "restaurant"]),
+
+    # ── Group 6: precondition handoff conflicts (Type B, 1 步) ──
+    # 这组任务把别名断裂放在目标动作的前置条件上。
+    # EO 中 serve 需要 on_tray，但 init 给的是 on_shelf/on_desk/on_belt；
+    # ER 中这些位置谓词被统一到 on，因此 serve 可直接接续。
+    ("xd_shelf_serve_fruit",
+     {"fruit_1": "fruit", "shelf_1": "shelf", "robot": "agent"},
+     [("on_shelf", ["fruit_1", "shelf_1"]), ("reachable", ["robot", "fruit_1"]),
+      ("clear", ["fruit_1"])],
+     [("served", ["fruit_1"])],
+     "B", ["retail", "restaurant"]),
+
+    ("xd_shelf_serve_snack",
+     {"snack_1": "snack", "shelf_1": "shelf", "robot": "agent"},
+     [("on_shelf", ["snack_1", "shelf_1"]), ("reachable", ["robot", "snack_1"]),
+      ("clear", ["snack_1"])],
+     [("served", ["snack_1"])],
+     "B", ["retail", "restaurant"]),
+
+    ("xd_desk_serve_salad",
+     {"salad_1": "salad", "whiteboard_1": "whiteboard", "robot": "agent"},
+     [("on_desk", ["salad_1", "whiteboard_1"]), ("reachable", ["robot", "salad_1"]),
+      ("clear", ["salad_1"])],
+     [("served", ["salad_1"])],
+     "B", ["office", "restaurant"]),
+
+    ("xd_desk_serve_dough",
+     {"dough_1": "dough", "whiteboard_1": "whiteboard", "robot": "agent"},
+     [("on_desk", ["dough_1", "whiteboard_1"]), ("reachable", ["robot", "dough_1"]),
+      ("clear", ["dough_1"])],
+     [("served", ["dough_1"])],
+     "B", ["office", "restaurant"]),
+
+    ("xd_belt_serve_noodle",
+     {"noodle_1": "noodle", "belt_1": "conveyor_belt", "robot": "agent"},
+     [("on_belt", ["noodle_1", "belt_1"]), ("reachable", ["robot", "noodle_1"]),
+      ("clear", ["noodle_1"])],
+     [("served", ["noodle_1"])],
+     "B", ["industrial", "restaurant"]),
+
+    ("xd_belt_serve_fruit",
+     {"fruit_1": "fruit", "belt_1": "conveyor_belt", "robot": "agent"},
+     [("on_belt", ["fruit_1", "belt_1"]), ("reachable", ["robot", "fruit_1"]),
+      ("clear", ["fruit_1"])],
+     [("served", ["fruit_1"])],
+     "B", ["industrial", "restaurant"]),
+
+    # ── Group 7: search-stress single-goal tasks (Type C, 1-2 步) ──
+    # 当前 planner 对多目标深链极不稳定，因此 Type C 先实现为“高干扰 + 单目标”的
+    # 搜索压力任务：保持 EO/ER 差异可验证，同时显式增加无关对象和可选绑定。
+    ("xd_shelf_serve_crowded",
+     {"fruit_1": "fruit", "snack_1": "snack", "shelf_1": "shelf", "tray_1": "tray", "robot": "agent"},
+     [("on_shelf", ["fruit_1", "shelf_1"]), ("on_shelf", ["snack_1", "shelf_1"]),
+      ("reachable", ["robot", "fruit_1"]), ("reachable", ["robot", "snack_1"]),
+      ("clear", ["fruit_1"]), ("clear", ["snack_1"])],
+     [("served", ["fruit_1"])],
+     "C", ["retail", "restaurant"]),
+
+    ("xd_desk_serve_crowded",
+     {"salad_1": "salad", "dough_1": "dough", "whiteboard_1": "whiteboard", "robot": "agent"},
+     [("on_desk", ["salad_1", "whiteboard_1"]), ("on_desk", ["dough_1", "whiteboard_1"]),
+      ("reachable", ["robot", "salad_1"]), ("reachable", ["robot", "dough_1"]),
+      ("clear", ["salad_1"]), ("clear", ["dough_1"])],
+     [("served", ["salad_1"])],
+     "C", ["office", "restaurant"]),
+
+    ("xd_shelf_to_desk_crowded",
+     {"form_1": "reimbursement_form", "note_1": "reimbursement_form", "shelf_1": "shelf", "whiteboard_1": "whiteboard", "robot": "agent"},
+     [("on_shelf", ["form_1", "shelf_1"]), ("on_shelf", ["note_1", "shelf_1"]),
+      ("reachable", ["robot", "form_1"]), ("reachable", ["robot", "note_1"]),
+      ("clear", ["form_1"]), ("clear", ["note_1"])],
+     [("on_desk", ["form_1", "whiteboard_1"])],
+     "C", ["retail", "office"]),
+
+    ("xd_belt_to_desk_crowded",
+     {"module_1": "memory_module", "part_1": "memory_module", "belt_1": "conveyor_belt", "whiteboard_1": "whiteboard", "robot": "agent"},
+     [("on_belt", ["module_1", "belt_1"]), ("on_belt", ["part_1", "belt_1"]),
+      ("reachable", ["robot", "module_1"]), ("reachable", ["robot", "part_1"]),
+      ("clear", ["module_1"]), ("clear", ["part_1"])],
+     [("on_desk", ["module_1", "whiteboard_1"])],
+     "C", ["industrial", "office"]),
+
+    ("xd_shelf_to_tray_crowded",
+     {"fruit_1": "fruit", "snack_1": "snack", "shelf_1": "shelf", "tray_1": "tray", "robot": "agent"},
+     [("on_shelf", ["fruit_1", "shelf_1"]), ("on_shelf", ["snack_1", "shelf_1"]),
+      ("reachable", ["robot", "fruit_1"]), ("reachable", ["robot", "snack_1"]),
+      ("clear", ["fruit_1"]), ("clear", ["snack_1"])],
+     [("on_tray", ["fruit_1", "tray_1"])],
+     "C", ["retail", "restaurant"]),
+
+    ("xd_belt_to_tray_crowded",
+     {"module_1": "memory_module", "part_1": "memory_module", "belt_1": "conveyor_belt", "tray_1": "tray", "robot": "agent"},
+     [("on_belt", ["module_1", "belt_1"]), ("on_belt", ["part_1", "belt_1"]),
+      ("reachable", ["robot", "module_1"]), ("reachable", ["robot", "part_1"]),
+      ("clear", ["module_1"]), ("clear", ["part_1"])],
+     [("on_tray", ["module_1", "tray_1"])],
+     "C", ["industrial", "restaurant"]),
 ]
 
 
-def generate_cross_domain_tasks(n: int = 30) -> List[Dict]:
-    """生成 n 个跨域组合任务。"""
+def generate_cross_domain_tasks(n: Optional[int] = None) -> List[Dict]:
+    """生成跨域组合任务；默认返回全部模板各一份。"""
     tasks = []
     templates = CROSS_DOMAIN_TEMPLATES
+
+    if n is None:
+        n = len(templates)
 
     for i in range(n):
         tmpl_idx = i % len(templates)

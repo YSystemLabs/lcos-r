@@ -1,17 +1,17 @@
 {
-  "domain_pddl_lines": 169,
+  "domain_pddl_lines": 170,
   "plannable_rate": 1.0,
   "total_tasks": 10,
   "plannable_count": 10,
-  "total_planning_ms": 70.26,
-  "avg_planning_ms": 7.03,
+  "total_planning_ms": 71.01,
+  "avg_planning_ms": 7.1,
   "tasks": [
     {
       "task": "pick_cup_from_table",
       "problem_lines": 14,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 3.46,
+      "planning_ms": 4.48,
       "plan": [
         "grasp(cup_1, robot)"
       ]
@@ -21,7 +21,7 @@
       "problem_lines": 12,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 7.86,
+      "planning_ms": 7.68,
       "plan": [
         "place(bowl_1, counter_1, robot)"
       ]
@@ -31,7 +31,7 @@
       "problem_lines": 12,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 2.53,
+      "planning_ms": 2.58,
       "plan": [
         "open(fridge_1, robot)"
       ]
@@ -61,7 +61,7 @@
       "problem_lines": 12,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 1.2,
+      "planning_ms": 1.26,
       "plan": [
         "close(drawer_1, robot)"
       ]
@@ -71,7 +71,7 @@
       "problem_lines": 12,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 3.7,
+      "planning_ms": 3.65,
       "plan": [
         "hang(towel_1, robot, robot)"
       ]
@@ -81,7 +81,7 @@
       "problem_lines": 12,
       "plannable": true,
       "plan_length": 1,
-      "planning_ms": 1.37,
+      "planning_ms": 1.36,
       "plan": [
         "brush(floor_1, broom_1, robot)"
       ]
@@ -101,7 +101,7 @@
       "problem_lines": 14,
       "plannable": true,
       "plan_length": 2,
-      "planning_ms": 44.2,
+      "planning_ms": 44.05,
       "plan": [
         "grasp(bottle_1, robot)",
         "place(bottle_1, counter_1, robot)"

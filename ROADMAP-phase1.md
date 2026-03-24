@@ -1,564 +1,451 @@
-# LCOS-R 一阶段实验实施路线图
+# LCOS-R 一阶段实验审计路线图（重审版）
 
-**目标**：验证核心 thesis——"开放扩展若没有 rewrite，会退化成规则堆积；有 rewrite，才会带来系统级收益"。
+**目的**：不是重复描述“理想中的实现应该是什么”，而是按可审计顺序核对当前仓库是否真的完成了一阶段实验，并判断哪些结论成立、哪些结论需要降级。
 
-**当前状态**：全部 11 个步骤（0-10）已完成。✅
+**使用方式**：
+- 每一步都同时检查 3 件事：代码、输出、验收。
+- 只有当该步的证据闭环成立，才打勾。
+- 如果某步发现设计不合理，不继续“硬验收”，而是先改写该步目标与通过条件。
 
----
+## 审计后修复状态（本轮已完成）
 
-## 步骤 0 ✅ 数据获取与领域分析
-
-> 已完成。
-
-- **输入**：AgiBot World Task Catalog（HuggingFace 217 个 task JSON）
-- **输出**：
-  - `data/agibot-world/task_info/` — 217 个原始 JSON
-  - `data/agibot-world/signature_extraction.json` — 结构化提取结果
-  - `data/agibot-world/extraction_report.txt` — 文本报告
-- **工具**：`scripts/extract_signatures.py`
-- **关键产出**：
-  - 五领域分类（家居 128 / 零售 30 / 工业 20 / 餐饮 22 / 办公 17）
-  - 每领域的技能集、物体集、动作谓词
-  - 跨领域共享技能 16 种（≥3 域）
+- [x] Pass 3 现在按任务级验证执行：`run_task_pruning()` 已从仅跑 `Q_star` 改为跑任务级 `Q_task` 变体，并在失败时回滚。
+- [x] `Q_star` 核心测试数已补足到 10：新增“动作引用的谓词必须已声明”检查。
+- [x] ManualOpt 已文件化：`data/manual_opt/stage_1.json` 到 `stage_4.json` 已成为真实输入，而不是源码硬编码。
+- [x] 一阶段已基于修复后的代码重新运行：`results/raw/summary.json` 现记录 `q_star_total = 10`、`q_task_total = 41`。
+- [x] Pass 3 逐任务验证已真实通过：`Expand+Rewrite` 在 S1-S4 的 `pass3_verified_rate = 100%`。
+- [x] 一阶段报告出口已统一：仓库现只保留 `results/phase1_analysis.md` 作为唯一一阶段报告。
 
 ---
 
-## 步骤 1 ✅ 实验设计定稿
+## 为什么重做路线图
 
-> 已完成。见 tech-note-0v1.md §9。
+旧版路线图不再适合作为验收依据，主要有 4 个问题：
 
----
+1. 把“计划中的理想结构”和“仓库当前事实”混在一起，导致许多已完成标记无法直接追溯到证据。
+2. 一些产物命名和实际仓库不一致，例如分析报告文件名、ManualOpt 配置位置、测试目录。
+3. 一些验收条件写得过强，但当前实现是研究原型级，不应按完整系统口径验收。
+4. 路线图默认“实现完成”，但当前更需要的是“逐步审计”，确认哪些 claim 真被代码和结果支撑。
 
-## 步骤 2 ✅ 语义签名数据结构 `Sigma_t`
-
-**目标**：实现 §4+§5.2 中定义的语义签名及其所有分量的可序列化数据结构。
-
-### 输入
-- `data/agibot-world/signature_extraction.json`（领域分类和提取结果）
-- tech-note §4（术语定义）、§5.2（系统配置定义）
-
-### 输出
-- `src/core/signature.py` — `SemanticSignature` 类
-
-### 具体内容
-
-```
-SemanticSignature:
-  S_t: Set[Type]           # 对象类型集合（cup, shelf, dough …）
-  D_t: Set[Entity]         # 当前对象域实例（cup_1, shelf_A …）
-  R_b: Set[BoolPredicate]  # 布尔谓词（on, in, reachable, holding …）
-  R_g: Set[GradedPredicate]# 渐变谓词（fragile, hot, heavy …）
-  A_t: Set[ActionTemplate]  # 动作模板（pick, place, pour …）
-  C_t: Set[Constraint]     # 约束条件
-
-ActionTemplate:
-  name: str
-  parameters: List[TypedParam]
-  preconditions: List[Predicate]  # 前提
-  effects: List[Predicate]        # 效果
-
-Constraint:
-  name: str
-  body: LogicalFormula  # 例如 hot(x) → ¬allow(grasp_bare(x))
-```
-
-### 验收标准
-- [ ] 能从 `signature_extraction.json` 自动生成家居领域的 `Sigma_0`
-- [ ] `Sigma_t` 可序列化为 JSON 并可反序列化
-- [ ] 有 `merge(Sigma_t, Delta)` 方法用于接受领域扩展
-- [ ] 有 `predicate_count()`, `rule_count()`, `constraint_count()` 等统计方法
+因此，Phase 1 从现在开始采用下面这份**审计版路线图**。
 
 ---
 
-## 步骤 3 ✅ Task Catalog → Sigma_t 映射脚本
+## 审计总原则
 
-**目标**：将步骤 0 提取的原始数据转换为步骤 2 定义的 `SemanticSignature` 实例。
+每一步都回答 3 个问题：
 
-### 输入
-- `data/agibot-world/signature_extraction.json`
-- `src/core/signature.py`（步骤 2 的数据结构）
+1. **代码是否存在且行为与设计一致**
+2. **输出是否真实生成且可复现**
+3. **验收标准是否合理且有客观证据**
 
-### 输出
-- `scripts/build_signatures.py` — 映射脚本
-- `data/signatures/domestic.json` — 家居领域签名
-- `data/signatures/retail_delta.json` — 零售领域增量
-- `data/signatures/industrial_delta.json` — 工业领域增量
-- `data/signatures/restaurant_delta.json` — 餐饮领域增量
-- `data/signatures/office_delta.json` — 办公领域增量
+每一步的结论只允许是下面三种之一：
 
-### 映射规则（对应 §9.1 表）
-
-| 来源字段 | 目标分量 | 示例 |
-|----------|----------|------|
-| skill 标签 | `A_t` 动作模板 | `Pick` → `pick(obj: Graspable)` |
-| init_scene_text 物体 | `S_t` + `D_t` | "cup" → 类型 `Cup ⊂ Container` |
-| init_scene_text 空间关系 | `R_b` 谓词 | "on the table" → `on(x, table)` |
-| init_scene_text 状态 | `R_b` / `R_g` | "closed" → `closed(x)`; "hot" → `hot(x)` |
-| 任务描述中的限制 | `C_t` 约束 | 安全/顺序限制 → 约束规则 |
-
-### 关键设计决策
-- 家居领域构成完整的 `Sigma_0`（基线）
-- 其余领域只输出**增量** `Delta_k`（仅包含该领域独有的新类型/新谓词/新技能/新约束）
-- **故意保留跨领域同义谓词**（如 `on(x,y)` vs `on_shelf(x,y)`），留给 rewrite 来合并
-
-### 验收标准
-- [ ] 5 个签名文件生成且可被 `SemanticSignature` 反序列化
-- [ ] `Sigma_0` 覆盖家居领域全部 69 种技能
-- [ ] 每个 `Delta_k` 至少包含 3 种该领域独有谓词、2 种独有技能、1 条独有约束
-- [ ] 存在至少 5 对跨领域同义谓词可供 rewrite 合并
+- `通过`：代码、输出、验收三者一致
+- `部分通过`：核心目标达成，但存在口径漂移或证据不足
+- `不通过`：代码或输出无法支撑该步 claim
 
 ---
 
-## 步骤 4 ✅ PDDL 生成器
+## 步骤 0：路线图重构与审计基线
 
-**目标**：将 `SemanticSignature` 翻译为 PDDL domain + problem 文件，使标准 planner 可求解。
+- [x] 完成
 
-### 输入
-- `SemanticSignature` 实例（步骤 2–3）
-- 具体任务的对象实例和目标状态
+**目标**：把旧版“建设路线图”改写为“审计路线图”，后续所有勾选都基于仓库事实而不是预期描述。
 
-### 输出
-- `src/core/pddl_generator.py` — 签名到 PDDL 的翻译器
-- 生成的 `*.pddl` domain / problem 文件
+**通过条件**：
+- 路线图明确区分“设计目标”和“当前仓库事实”
+- 后续步骤都能对应到真实文件、真实脚本、真实结果
+- 不再使用“已完成”作为先验结论，而是通过审计逐步打勾
 
-### 具体内容
-
-```
-pddl_generator.generate_domain(sigma: SemanticSignature) -> str
-  # S_t → (:types ...)
-  # R_b → (:predicates ...)
-  # A_t → (:action ... :parameters :precondition :effect)
-  # C_t → 嵌入 action precondition 或单独 axiom
-
-pddl_generator.generate_problem(sigma, objects, init_state, goal) -> str
-  # D_t → (:objects ...)
-  # init_state → (:init ...)
-  # goal → (:goal ...)
-```
-
-### Planner 选择
-- **推荐**：Fast Downward（开源，支持增量规划，Python 绑定）
-- **备选**：ENHSP（支持 numeric planning）、pyperplan（纯 Python，调试方便）
-
-### 验收标准
-- [ ] 家居 `Sigma_0` 生成的 PDDL domain 可被 Fast Downward 解析
-- [ ] 对家居领域 10 个采样任务，planner 能生成合法 plan
-- [ ] PDDL 行数可度量（作为表示复杂度指标）
+**当前结论**：通过。
 
 ---
 
-## 步骤 5 ✅ 测试集框架 `Q_star / Q_task / Q_t`
+## 步骤 1：Phase 1 研究问题与实验设计是否合理
 
-**目标**：实现 §5.1 定义的三层测试集及其执行接口。
+- [x] 完成
 
-### 输入
-- `SemanticSignature` + PDDL 生成器（步骤 2–4）
-- tech-note §5.1（测试定义）、§6.6（分层验证）
+**要检查什么**：
+- 一阶段是否真的在验证 tech note 的核心 thesis，而不是验证别的问题
+- 实验变量、对照组和指标是否足够支撑“一阶段应验证的最小结论”
+- 一阶段中哪些内容本来就不该要求验证，例如跨域泛化保护
 
-### 输出
-- `src/core/test_suite.py` — 测试集框架
+**需要核对的对象**：
+- `tech-note-0v1.md` 中 §7、§9.1–§9.6
+- `README.md` 中实验摘要
+- 一阶段脚本与结果文件
 
-### 测试类型（按 §6.6 分层）
+**通过条件**：
+- 能把一阶段目标明确收敛为：
+  - 验证扩展导致复杂度增长
+  - 验证 rewrite 抑制复杂度增长
+  - 不把“跨域可规划性保护”算作一阶段必须完成的内容
+- 若原设计过强，必须给出降级后的合理目标
 
-```
-T0 廉价测试 (O(1)–O(n)):
-  - type_consistency(sigma)      # 类型一致性
-  - signature_match(sigma, plan) # 签名匹配
-  - well_formedness(config)      # WF(c) 验证
+**交付物**：
+- 一段书面结论，说明一阶段“该验证什么、不该验证什么”
 
-T1 中等测试 (O(n²)–O(n³)):
-  - predicate_eval(sigma, state, pred) # 谓词求值
-  - affordance_check(sigma, action)     # affordance 查表
-  - risk_threshold(sigma, action)       # 风险阈值
+**当前结论**：通过，但需要降级表述。
 
-T2 昂贵测试 (NP-hard):
-  - is_plannable(sigma, init, goal)     # 规划可行性
-  - plan_cost(sigma, init, goal)        # 计划代价
-  - conflict_count(sigma)               # 规则冲突数
-```
+- 一阶段的**合理目标**应当限定为：
+  - 验证多域扩展是否带来表示复杂度增长
+  - 验证 rewrite 是否显著抑制这种复杂度增长
+  - 验证 Baseline 不扩展时会失去新域覆盖能力
+- 一阶段**不应承担**的目标：
+  - 证明 Expand-Only 的可规划率会在自然任务上普遍下降
+  - 证明 rewrite 已经保护了跨域可规划性
+  - 证明开放扩展的一般性退化规律
+- 原因很直接：当前一阶段任务基本是单域、1-2 步模板任务，它们适合测“表示是否膨胀”，不适合测“跨域规划是否退化”。这与 tech note 在 §9.7 对二阶段补实验的动机是一致的。
+- 因此，后续所有一阶段审计都按下面这个**最小充分 claim**执行：
 
-### 三层测试集
-
-```
-Q_star ⊆ Q_task ⊆ Q_t
-
-Q_star: 核心安全+类型测试（只增不减）
-  - 类型一致性
-  - 核心约束不违反
-  - 安全谓词不被删除
-
-Q_task: 当前领域任务测试
-  - 当前领域采样任务的可规划性
-  - 规划结果的前提/效果一致性
-
-Q_t: 全集 = Q_star + Q_task + 诊断测试
-  - 谓词覆盖率
-  - 规划代价统计
-```
-
-### 验收标准
-- [ ] `Q_star` 包含至少 10 条核心测试
-- [ ] 家居 `Sigma_0` 上全部 T0/T1 测试通过
-- [ ] 家居领域 10 个任务的 T2 测试可执行
-- [ ] 测试结果可序列化，支持前后对比
+> Phase 1 只验证“rewrite 对复杂度抑制”的必要证据，不验证“rewrite 对跨域可规划性保护”的充分证据。
 
 ---
 
-## 步骤 6 ✅ 系统配置 `Config_t` 与 Rewrite Pass 实现
+## 步骤 2：输入数据与语义签名构建是否闭环
 
-**目标**：实现 §5.2 的系统配置和 §6.5 的三个核心 rewrite pass。
+- [x] 完成
 
-### 输入
-- `SemanticSignature`, PDDL 生成器, 测试集框架（步骤 2–5）
-- tech-note §6（Rewrite Layer 完整定义）
+**要检查什么**：
+- 原始 AgiBot World 提取文件是否存在
+- 五域签名和四个 delta 是否真的由脚本生成并能被加载
+- 路线图中的输入输出命名是否和仓库一致
 
-### 输出
-- `src/core/config.py` — `SystemConfig` 类（对应 $c_t$）
-- `src/rewrite/pass1_predicate_elimination.py` — 冗余谓词消除
-- `src/rewrite/pass2_rule_folding.py` — 规则折叠
-- `src/rewrite/pass3_object_pruning.py` — 无关对象裁剪
-- `src/rewrite/engine.py` — rewrite 执行引擎
+**需要核对的对象**：
+- `data/agibot-world/`
+- `data/signatures/`
+- `scripts/extract_signatures.py`
+- `scripts/build_signatures.py`
+- `src/core/__init__.py`
 
-### 系统配置
+**通过条件**：
+- 输入文件存在
+- 构建脚本可运行或现有结果可被重新加载
+- `Sigma_0` 与各 `Delta_k` 的最小统计信息可核对
 
-```python
-class SystemConfig:
-    sigma: SemanticSignature  # 语义签名
-    belief: BeliefState       # 当前 belief
-    projection: Projection    # Π_t
-    transition: TransitionKernel  # K_t
-    planner: PlannerInterface    # Plan_t
-    grammar: RewriteGrammar      # G_t
-```
+**交付物**：
+- 一张“输入 → 脚本 → 签名文件”的审计表
 
-### 三个 Rewrite Pass
+**当前结论**：通过。
 
-**Pass 1 — 冗余谓词消除（Core-Preserving）**
-```
-输入: config_t, Q_star
-过程:
-  1. 遍历 R_b ∪ R_g 中每个谓词 P
-  2. 检查 P 是否可由其他谓词在 D_t 上推导
-  3. 若可推导，构造候选替换 config'
-  4. 分层验证: T0 → T1 → T2 on Q_star
-  5. 通过则应用替换
-输出: 简化后的 config_t'
-```
+**审计结果**：
 
-**Pass 2 — 规则折叠（Core-Preserving）**
-```
-输入: config_t, Q_star
-过程:
-  1. 识别规则中的同构模式（相同结构、不同实例）
-  2. 构造参数化通用规则
-  3. 分层验证
-输出: 规则数减少后的 config_t'
-```
-
-**Pass 3 — 无关对象裁剪（Task-Preserving）**
-```
-输入: config_t, Q_task, current_task
-过程:
-  1. 分析 current_task 涉及的对象集合
-  2. 标记不出现在 Q_task 任何输入中的对象
-  3. 从工作状态中移除标记对象及其关联事实
-  4. 在 Q_task 上验证
-输出: 裁剪后的 config_t'
-```
-
-### Rewrite 引擎
-
-```python
-class RewriteEngine:
-    def run_pass_sequence(config, passes, test_suite):
-        """按序执行 pass 列表，每个 pass 后验证，失败则回滚"""
-        for p in passes:
-            config_new = p.apply(config)
-            if test_suite.verify(config_new, p.required_level):
-                config = config_new
-                log(p.name, "applied", metrics(config))
-            else:
-                log(p.name, "rejected")
-        return config
-```
-
-### 验收标准
-- [ ] Pass 1 能在家居+零售合并签名上消除至少 1 对同义谓词
-- [ ] Pass 2 能将至少 2 条同构规则折叠为 1 条参数化规则
-- [ ] Pass 3 能在单领域任务中裁剪其他领域对象
-- [ ] 每个 pass 的 Q_star / Q_task 回归测试全部通过
-- [ ] 每个 pass 记录 wall-clock 时间
-
----
-
-## 步骤 7 ✅ 四组实验系统搭建
-
-**目标**：实现 §9.3 定义的四组对比系统。
-
-### 输入
-- 步骤 2–6 的全部组件
-- 五领域签名和增量（步骤 3）
-
-### 输出
-- `src/experiment/baseline.py` — Baseline 系统
-- `src/experiment/expand_only.py` — Expand-Only 系统
-- `src/experiment/expand_rewrite.py` — Expand+Rewrite 系统
-- `src/experiment/expand_manual.py` — Expand+ManualOpt 系统
-- `data/manual_opt/` — 人工优化规则（步骤 7 中手工编写）
-
-### 四组系统逻辑
-
-```
-                        Stage 0    Stage 1      Stage 2        Stage 3        Stage 4
-                        (家居)    (+零售)      (+工业)        (+餐饮)        (+办公)
-
-Baseline:               Σ₀         Σ₀           Σ₀             Σ₀             Σ₀
-                        (不变)
-
-Expand-Only:            Σ₀        Σ₀+Δ₁       Σ₀+Δ₁+Δ₂      …+Δ₃           …+Δ₄
-                                  (直接追加)
-
-Expand+Rewrite:         Σ₀        R(Σ₀+Δ₁)    R(…+Δ₂)       R(…+Δ₃)       R(…+Δ₄)
-                                  (追加后 rewrite)
-
-Expand+ManualOpt:       Σ₀        M(Σ₀+Δ₁)    M(…+Δ₂)       M(…+Δ₃)       M(…+Δ₄)
-                                  (追加后手动优化)
-```
-
-### ManualOpt 准备工作
-每个阶段的手动优化规则需要提前准备：
-1. 查看 `Expand-Only` 阶段合并后的签名
-2. 人工标注哪些谓词应该合并、哪些规则应该折叠、哪些对象应该裁剪
-3. 将手动决策写为配置文件 `data/manual_opt/stage_k.json`
-
-### 验收标准
-- [ ] 四组系统都能在 Stage 0 上正常运行
-- [ ] Expand-Only 在 Stage 1 后谓词数 > Stage 0
-- [ ] Expand+Rewrite 在 Stage 1 后谓词数 < Expand-Only
-- [ ] ManualOpt 可配置且可复现
-
----
-
-## 步骤 8 ✅ 指标收集与实验运行
-
-**目标**：运行 4 阶段 × 4 组实验，收集 §9.4 的五类指标。
-
-### 输入
-- 四组系统（步骤 7）
-- 每领域采样任务集（≥30 个任务/领域，配对设计）
-
-### 输出
-- `src/experiment/runner.py` — 实验运行器
-- `src/experiment/metrics.py` — 指标收集模块
-- `results/raw/` — 原始实验数据（CSV/JSON）
-- `results/pilot/` — pilot study 结果（每领域 10 任务）
-
-### 实验流程
-
-```
-for stage in [0, 1, 2, 3, 4]:
-    for system in [Baseline, ExpandOnly, ExpandRewrite, ExpandManualOpt]:
-        config = system.setup(stage)
-        for task in sampled_tasks[stage]:
-            metrics = run_single(config, task)
-            record(system, stage, task, metrics)
-```
-
-### 五类指标（对应 §9.4）
-
-```
-1. 表示复杂度:
-   - active_predicates: |R_b| + |R_g|
-   - active_rules: len(rules)
-   - active_constraints: len(constraints)
-   - pddl_lines: wc -l domain.pddl
-   - fact_count: len(working_state)
-   - predicate_overlap_rate: 跨领域重复谓词比例
-
-2. 计算开销:
-   - sig_construction_ms: 签名构造时间
-   - planning_ms: 单次规划时间
-   - rewrite_ms: rewrite pass 时间
-   - verify_ms: 验证时间
-
-3. 任务可规划性:
-   - plannable_rate: 可规划率 (%)
-   - conflict_count: 规则冲突数
-   - regression_pass_rate: Q_task 回归通过率 (%)
-
-4. 稳定性曲线:
-   - 以上指标随 stage 0→4 的变化趋势
-
-5. 端到端参照:
-   - go1_success_rate: GO-1 已发表成功率 [8]
-   - lcos_plannable_rate: LCOS-R 可规划率（同任务）
-```
-
-### 统计设计
-1. **Pilot study**：每领域 10 个任务，估计方差
-2. **Power analysis**：目标 power ≥ 0.8，α = 0.05，d ≥ 0.5
-3. **正式实验**：根据 pilot 确定样本量（最少 30/领域）
-4. **配对检验**：同一任务集在四组系统上运行，配对 t 检验 / Wilcoxon
-
-### 验收标准
-- [ ] Pilot study 完成，方差估计合理
-- [ ] 正式实验每领域 ≥ 30 任务
-- [ ] 五类指标全部收集到 `results/raw/`
-- [ ] 原始数据可复现
-
----
-
-## 步骤 9 ✅ 结果分析与可视化
-
-**目标**：分析、可视化、验证核心 thesis。
-
-### 输入
-- `results/raw/` — 原始实验数据（步骤 8）
-- §9.5 预期结果作为对照
-
-### 输出
-- `scripts/analyze_results.py` — 分析脚本
-- `results/figures/` — 图表
-- `results/analysis.md` — 分析报告
-
-### 核心图表
-
-```
-图 1: 表示复杂度 vs 扩展阶段（4 条折线，x=stage, y=predicates+rules）
-      预期: Expand-Only 线性/超线性上升，Expand+Rewrite 被抑制
-
-图 2: 可规划率 vs 扩展阶段（4 条折线）
-      预期: Expand-Only 下降，Expand+Rewrite 稳定
-
-图 3: 规划时间 vs 扩展阶段（4 条折线）
-      预期: 同上趋势
-
-图 4: Rewrite 收益分解（堆叠柱状图）
-      Pass 1/2/3 各自消除的谓词/规则/对象数
-
-图 5: OOD 泛化（跨领域复合任务的可规划率对比）
-
-图 6: 跨领域谓词重叠率（rewrite 前 vs 后）
-
-表 1: 与 GO-1 参照对比（可规划率 vs 动作成功率）
-```
-
-### 核心统计检验
-
-```
-H0: Expand+Rewrite 的表示复杂度 = Expand-Only 的表示复杂度
-H1: Expand+Rewrite 的表示复杂度 < Expand-Only 的表示复杂度
-检验: 配对 t 检验 / Wilcoxon signed-rank test
-```
-
-### 验收标准
-- [ ] 图 1–6 生成且趋势与 §9.5 预期一致（或记录偏差原因）
-- [ ] 统计检验 p < 0.05 或记录未达显著性的原因
-- [ ] 分析报告完成
-
----
-
-## 步骤 10 ✅ 回写 tech-note 并校准参数
-
-**目标**：根据实验结果更新 tech-note，校准代价函数权重和误差预算参数。
-
-### 输入
-- `results/analysis.md`（步骤 9）
-- `tech-note-0v1.md`
-
-### 输出
-- `tech-note-0v2.md`（更新版本）
-- 更新内容：
-  - §9 补充实际实验结果数据
-  - §10 更新数学自洽性判断
-  - §11 更新工程可落地判断
-  - §8.2 校准 $\lambda_1$–$\lambda_4$ 权重和 $\varepsilon$ 预算
-  - §13 更新下一步计划
-
-### 验收标准
-- [ ] 实验数据嵌入 tech-note
-- [ ] 代价函数权重有经验依据
-- [ ] 下一步方向明确
-
----
-
-## 依赖关系与建议时序
-
-```
-步骤 0 ✅ ──→ 步骤 1 ✅ ──→ 步骤 2 ──→ 步骤 3 ──→ 步骤 4
-                                                       ↓
-                                                    步骤 5
-                                                       ↓
-                                              步骤 6 ──→ 步骤 7 ──→ 步骤 8 ──→ 步骤 9 ──→ 步骤 10
-```
-
-可并行的步骤：
-- **步骤 2 + 步骤 4** 可以同时开始（签名结构和 PDDL 生成器独立）
-- **步骤 5** 可在步骤 4 完成后立刻开始
-- **ManualOpt 规则编写**（步骤 7 的一部分）可在步骤 6 完成后并行准备
-
----
-
-## 项目目录结构（目标）
-
-```
-lcos-r/
-├── tech-note-0v1.md             # 主文档
-├── ROADMAP.md                   # 本路线图
-├── data/
-│   ├── agibot-world/
-│   │   ├── task_info/           # 217 个原始 JSON ✅
-│   │   ├── signature_extraction.json  ✅
-│   │   └── extraction_report.txt      ✅
-│   ├── signatures/              # 步骤 3 产出
-│   │   ├── domestic.json
-│   │   ├── retail_delta.json
-│   │   ├── industrial_delta.json
-│   │   ├── restaurant_delta.json
-│   │   └── office_delta.json
-│   └── manual_opt/              # 步骤 7 手动优化规则
-├── scripts/
-│   ├── extract_signatures.py    ✅
-│   ├── build_signatures.py      # 步骤 3
-│   └── analyze_results.py       # 步骤 9
-├── src/
-│   ├── core/
-│   │   ├── signature.py         # 步骤 2
-│   │   ├── config.py            # 步骤 6
-│   │   ├── pddl_generator.py    # 步骤 4
-│   │   └── test_suite.py        # 步骤 5
-│   ├── rewrite/
-│   │   ├── engine.py            # 步骤 6
-│   │   ├── pass1_predicate_elimination.py
-│   │   ├── pass2_rule_folding.py
-│   │   └── pass3_object_pruning.py
-│   └── experiment/
-│       ├── runner.py            # 步骤 8
-│       ├── metrics.py           # 步骤 8
-│       ├── baseline.py          # 步骤 7
-│       ├── expand_only.py
-│       ├── expand_rewrite.py
-│       └── expand_manual.py
-├── results/
-│   ├── pilot/                   # 步骤 8 pilot
-│   ├── raw/                     # 步骤 8 正式
-│   ├── figures/                 # 步骤 9
-│   └── analysis.md              # 步骤 9
-└── tests/                       # 单元测试
-    ├── test_signature.py
-    ├── test_pddl_generator.py
-    ├── test_rewrite_passes.py
-    └── test_experiment.py
-```
-
----
-
-## 风险点与缓解
-
-| 风险 | 影响 | 缓解 |
+| 环节 | 证据 | 结论 |
 |------|------|------|
-| Task Catalog 描述太粗，无法构造精确前提/效果 | 签名质量差 | 手动补充前 50 个高频任务的前提/效果；在 §9 中说明这是"从自然语言描述中提取的近似签名" |
-| Fast Downward 对大签名规划超时 | T2 测试卡住 | 设置 planner 超时 30s；超时视为"不可规划" |
-| Expand+Rewrite 和 Expand-Only 差异不显著 | thesis 不成立 | 如实报告；分析原因（可能是领域差异本身较小，或 rewrite pass 太保守） |
-| ManualOpt 的人工偏见 | 对比不公平 | 由两个人独立编写 ManualOpt 规则，取交集 |
-| approximate rewrite 误差累积 | 第一版暂不实现 Pass 5（affordance 摘要），只做 exact rewrite（Pass 1–3） |
+| 原始提取输入 | `data/agibot-world/task_info/`, `signature_extraction.json`, `extraction_report.txt` 存在 | 通过 |
+| 构建脚本 | `scripts/build_signatures.py` 存在，逻辑明确区分 `Sigma_0` 与 `Delta_k` | 通过 |
+| 签名产物 | `data/signatures/` 下 5 个 JSON 文件存在 | 通过 |
+| 可加载性 | 当前 `SemanticSignature.load()` 可成功加载全部 5 个签名文件 | 通过 |
+
+**加载核对结果**：
+
+- `domestic.json`: complexity = 59
+- `retail_delta.json`: complexity = 14
+- `industrial_delta.json`: complexity = 15
+- `restaurant_delta.json`: complexity = 19
+- `office_delta.json`: complexity = 18
+
+**保留说明**：
+
+- 这一层证明的是“数据输入到签名文件的工程闭环存在”。
+- 它**不证明**签名对 Task Catalog 的逐项语义映射是完备保真的。
+- 尤其旧路线图中类似“覆盖家居领域全部 69 种技能”的说法，当前仓库并没有按那种逐项技能计数方式实现；当前签名更接近研究抽象版 IR，而不是任务目录的逐字段镜像。
+
+---
+
+## 步骤 3：核心数据结构与 PDDL/Planner 实现是否匹配设计
+
+- [x] 完成
+
+**要检查什么**：
+- `SemanticSignature`、动作、约束、统计方法是否存在
+- PDDL 生成是否可用
+- planner 实现究竟是什么，是否与文档口径一致
+
+**需要核对的对象**：
+- `src/core/__init__.py`
+- `src/core/config.py`
+- `src/core/pddl_generator.py`
+- `scripts/test_pddl.py`
+- `data/pddl_test/`
+
+**通过条件**：
+- 核心数据结构可序列化、可加载、可统计
+- PDDL 生成脚本可运行
+- planner 的真实实现被准确记录
+- 若与路线图不一致，必须记录“设计口径”和“实现口径”的差异
+
+**交付物**：
+- 一段实现偏差说明
+
+**当前结论**：部分通过。
+
+**通过的部分**：
+
+- `SemanticSignature`、`Predicate`、`ActionTemplate`、`Constraint` 等核心对象存在，且支持序列化、反序列化、统计与 merge。
+- `scripts/test_pddl.py` 可端到端运行，`Sigma_0` 能生成 domain/problem，并在 10 个家居任务上得到 100% 可规划结果。
+- `data/pddl_test/pddl_test_results.json` 已记录最小闭环输出。
+
+**偏差与降级说明**：
+
+1. `SystemConfig` 只是简化版配置容器，未实现 tech note 中更完整的 belief / projection / transition / planner / grammar 分量。
+2. planner 的真实实现不是旧路线图中偏向外部 planner 的口径，而是 `src/core/pddl_generator.py` 中的**自写 BFS planner**。
+3. 文件头注释写“使用 pyperplan”，但代码实际没有调用 pyperplan；这里应视为文档口径漂移，而不是功能错误。
+4. 因为当前 planner 是研究原型级 BFS，所以后续关于“可规划率”的结论必须理解为“在当前 planner 下的可规划率”，不能自动上升为对一般 planner 的结论。
+
+**审计结论**：
+
+- 若问题是“核心实现是否能自洽运行”，答案是是。
+- 若问题是“是否完整实现了 tech note 的系统配置抽象和 planner 设想”，答案是否。
+- 后续一阶段审计统一按“原型实现闭环”口径继续，而不是按“完整系统实现”口径继续。
+
+---
+
+## 步骤 4：测试框架与 Rewrite 合法性验证是否真的成立
+
+- [x] 完成
+
+**要检查什么**：
+- `Q_star / Q_task / Q_t` 是否真的实现
+- T0/T1/T2 是否只是命名，还是实际参与了 pass 验证
+- Pass 1/2/3 的合法性验证是否符合各自设计目标
+
+**需要核对的对象**：
+- `src/core/test_suite.py`
+- `src/rewrite/engine.py`
+- `src/rewrite/pass1_predicate_elimination.py`
+- `src/rewrite/pass2_rule_folding.py`
+- `src/rewrite/pass3_object_pruning.py`
+
+**通过条件**：
+- 能明确写出每个 pass 实际跑了什么验证
+- 能识别并记录所有“设计上要求、实现里没做到”的地方
+- 至少区分 core-preserving 与 task-preserving 两类验证是否被真的执行
+
+**交付物**：
+- 一张“设计要求 / 实际实现 / 审计结论”对照表
+
+**当前结论**：部分通过。
+
+| 设计要求 | 实际实现 | 审计结论 |
+|------|------|------|
+| 存在 `Q_star / Q_task / Q_t` 三层测试集 | `src/core/test_suite.py` 中均已实现 | 通过 |
+| T0/T1/T2 都进入测试框架 | 已实现对应测试函数 | 通过 |
+| Pass 1/2 以 `Q_star` 验证 core-preserving | `run_global_rewrite()` 确实这么做 | 通过 |
+| Pass 3 以 `Q_task` 验证 task-preserving | `run_task_pruning()` 现已改为按单任务 `Q_task` 变体验证，并在失败时回滚 | 通过 |
+| rewrite 采用真正的分层验证策略 | 目前更接近“调用一个聚合测试函数”，不是严格的分层淘汰流程 | 部分通过 |
+
+**关键结论**：
+
+1. 测试框架本身不是空壳，`Q_star`、`Q_task`、`Q_t` 都存在。
+2. Pass 1/2 的 core-preserving 验证成立，Pass 3 的 task-preserving 验证现在也已接入单任务 `Q_task`。
+3. 当前仍不能称为“严格分层验证流水线”，因为实现方式依旧是聚合测试函数，而不是 T0→T1→T2 的逐层淘汰执行器。
+4. 因此，Phase 1 现在可以把 Pass 3 写成“已做任务级验证并通过”，但不能把整个 rewrite 引擎写成“完整实现了 tech note 中理想化的分层验证机制”。
+
+---
+
+## 步骤 5：四组系统与 ManualOpt 对照是否可审计
+
+- [x] 完成
+
+**要检查什么**：
+- 四组系统是否都存在、行为是否符合定义
+- ManualOpt 是否真正可配置、可复现，还是源码硬编码
+- Stage 0–4 的构造逻辑是否一致
+
+**需要核对的对象**：
+- `src/experiment/systems.py`
+- `data/manual_opt/`
+- 一阶段和二阶段运行脚本
+
+**通过条件**：
+- 四组系统行为可解释
+- ManualOpt 的真实实现方式被写清楚
+- 若不满足“可配置且可复现”，该步只能判定为部分通过
+
+**交付物**：
+- 四组系统审计摘要
+
+**当前结论**：通过。
+
+**审计结果**：
+
+- `Baseline`、`Expand-Only`、`Expand+Rewrite`、`Expand+ManualOpt` 四组系统都已实现，且一阶段运行脚本确实按这四组收集结果。
+- `Expand+Rewrite` 的行为与设计基本一致：全局先做 Pass 1/2，再在 task 级执行 Pass 3。
+- `Expand+ManualOpt` 也真实存在，且当前已改为从 `data/manual_opt/stage_1.json` 到 `stage_4.json` 读取文件化配置。
+- `data/manual_opt/` 目录现已成为真实输入，因此“ManualOpt 可配置且可复现”这一条已满足。
+
+**结论拆分**：
+
+1. 若问题是“四组对照系统是否真实存在并参与实验”，答案是是。
+2. 若问题是“ManualOpt 是否按路线图要求实现为独立人工配置产物”，答案也是是。
+
+**后续口径约束**：
+
+- 可以说：仓库中存在一个可运行且已文件化的 ManualOpt 基线。
+- 仍不应夸大为“已对人工优化规则正确性做独立外部审计”，因为当前只是实现了文件化与复现性，不是额外的人审流程。
+
+---
+
+## 步骤 6：一阶段原始结果是否可复现
+
+- [x] 完成
+
+**要检查什么**：
+- 一阶段实验脚本是否能端到端运行
+- `results/raw/` 与 `results/pilot/` 是否由当前代码重跑得到
+- 关键主结果是否稳定：59→125、59→115、p=0.0248
+
+**需要核对的对象**：
+- `scripts/run_experiment.py`
+- `scripts/analyze_results.py`
+- `results/raw/summary.json`
+- `results/raw/full_results.json`
+- `results/pilot/`
+
+**通过条件**：
+- 脚本可运行
+- 关键结构性结果可复现
+- timing 波动允许存在，但不影响主结论
+
+**交付物**：
+- 一阶段复算结论
+
+**当前结论**：通过。
+
+**复算结果**：
+
+- `scripts/run_experiment.py` 可端到端运行并刷新 `results/raw/`。
+- `results/pilot/summary.json` 存在，说明 pilot 版本结果也有产物。
+- 一阶段关键主结果可复现：
+  - `Baseline`: S4 complexity = 59
+  - `Expand-Only`: S4 complexity = 125
+  - `Expand+Rewrite`: S4 complexity = 115
+  - `Expand+ManualOpt`: S4 complexity = 114
+- 关键趋势稳定：
+  - `Expand-Only` 复杂度随阶段增长
+  - `Expand+Rewrite` 与 `ManualOpt` 都压低了复杂度
+  - `Baseline` 在新领域上失去覆盖能力
+
+**复现边界**：
+
+- `planning_ms`、`setup_ms` 等 timing 字段会有自然波动，不应要求逐值一致。
+- 但复杂度、可规划率、统计检验用到的主序列是稳定的，因此足以支持“结果可复现”的判断。
+
+---
+
+## 步骤 7：一阶段输出物与验收标准是否一致
+
+- [x] 完成
+
+**要检查什么**：
+- 路线图中声明的产物是否都存在
+- 结果报告命名是否一致
+- 验收标准是否真的被满足，例如 `Q_star >= 10`、测试目录、analysis 文件命名
+
+**需要核对的对象**：
+- `README.md`
+- `results/`
+- `ROADMAP-phase1.md`
+- 仓库实际目录结构
+
+**通过条件**：
+- 产物命名一致，或明确标注不一致项
+- 每条验收标准都有证据
+- 未满足项必须转入问题清单，而不是继续打勾
+
+**交付物**：
+- 一阶段验收清单
+
+**当前结论**：部分通过。
+
+**产物核对**：
+
+| 项目 | 仓库现状 | 结论 |
+|------|------|------|
+| 原始结果目录 | `results/raw/` 存在 | 通过 |
+| pilot 结果目录 | `results/pilot/` 存在 | 通过 |
+| 一阶段分析报告 | 现仅保留 `results/phase1_analysis.md` | 通过 |
+| 图表目录 | `results/figures/` 存在 | 通过 |
+| 单元测试目录 | `tests/` 不存在 | 不通过 |
+
+**验收标准核对**：
+
+1. 旧路线图要求 `Q_star` 至少 10 条核心测试，当前结果文件里稳定记录的是 `q_star_total = 10`，因此该条**通过**。
+2. 旧路线图要求 ManualOpt 配置文件化交付，当前 `data/manual_opt/` 已存在阶段配置文件，因此该条**通过**。
+3. 旧路线图要求 `tech-note-0v2.md`，当前仓库没有该文件，因此该条**不通过**。
+4. README 与一阶段报告命名目前已统一到 `results/phase1_analysis.md`，该条**通过**。
+
+**审计判断**：
+
+- 一阶段产物层面的命名漂移已基本修正，但仍存在少数原路线图承诺未兑现项。
+- 因此目前仍不能直接写成“已按原路线图全部验收”。
+- 更准确的说法是：
+  - 审计步骤已完成
+  - 核心实验产物已生成
+  - 但原路线图中的个别交付与验收条目仍未严格满足
+
+---
+
+## 步骤 8：一阶段结论是否可靠，以及应如何表述
+
+- [x] 完成
+
+**要检查什么**：
+- 当前结果最多能支撑到什么强度的 claim
+- 哪些结论可以保留
+- 哪些结论必须降级为“必要条件验证”或“研究原型结果”
+
+**需要核对的对象**：
+- `tech-note-0v1.md`
+- `README.md`
+- 一阶段分析报告与原始结果
+
+**通过条件**：
+- 给出一版收敛后的 Phase 1 结论
+- 明确列出可信边界和未验证部分
+
+**交付物**：
+- 一段可直接回写到 tech note 的结论文本
+
+**当前结论**：通过，但必须使用收敛后的表述。
+
+**建议采用的一阶段结论文本**：
+
+> Phase 1 证明了在当前五域渐进扩展设置下，纯扩展会带来表示复杂度持续增长，而 rewrite 能显著抑制这种增长；同时，不扩展的 Baseline 无法覆盖新域任务。基于当前实现，Phase 1 可被视为“rewrite 对复杂度抑制”的必要证据。它还不能单独证明 rewrite 一般性地保护了跨域可规划性，也不能单独证明开放扩展若不 rewrite 就会在自然任务分布上普遍退化。
+
+**允许保留的结论**：
+
+1. `Expand-Only` 的复杂度随阶段增长。
+2. `Expand+Rewrite` 显著抑制了这种增长。
+3. `Expand+ManualOpt` 与 `Expand+Rewrite` 接近，说明自动 rewrite 具备工程价值。
+4. `Baseline` 不扩展时无法覆盖新域任务。
+
+**必须降级或移除的结论**：
+
+1. “Phase 1 已证明 rewrite 保护跨域可规划性”
+2. “Phase 1 已证明 Expand-Only 会导致规划退化”
+3. “Phase 1 已完整实现 tech note 设想的严格分层验证流水线”
+4. “Phase 1 已按原路线图全部验收完成”
+
+**可信边界**：
+
+- 这是一个研究原型级、一阶段 kill test 级的结果。
+- 它足以支撑内部 tech note 和较保守的研究表述。
+- 它不应被包装成对开放世界扩展的一般性充分验证。
+
+---
+
+## 当前执行顺序
+
+1. 步骤 1：重审一阶段研究问题与实验设计
+2. 步骤 2：核对输入数据与签名构建
+3. 步骤 3：核对核心数据结构与 PDDL/Planner
+4. 步骤 4：核对测试框架与 rewrite 合法性
+5. 步骤 5：核对四组系统与 ManualOpt
+6. 步骤 6：复算一阶段结果
+7. 步骤 7：核对输出物与验收标准
+8. 步骤 8：重写一阶段结论
+
+当前版本中，步骤 0–8 已完成审计并逐步打勾。后续如果要继续推进，应进入“修正清单”阶段，而不是继续沿用旧版完成态口径。

@@ -24,7 +24,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 161.04,
+        "planning_ms": 150.43,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -37,7 +37,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 153.61,
+        "planning_ms": 149.99,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -50,7 +50,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 152.96,
+        "planning_ms": 148.31,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -81,7 +81,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 619.27,
+        "planning_ms": 601.23,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -94,7 +94,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 608.62,
+        "planning_ms": 601.98,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -107,7 +107,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 603.65,
+        "planning_ms": 595.15,
         "nodes_explored": 200001,
         "plan": []
       }
@@ -138,7 +138,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.41,
+        "planning_ms": 156.2,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -151,7 +151,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 149.11,
+        "planning_ms": 153.86,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -164,7 +164,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 146.92,
+        "planning_ms": 149.31,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -195,7 +195,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 593.31,
+        "planning_ms": 630.9,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -208,7 +208,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 601.29,
+        "planning_ms": 603.5,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -221,7 +221,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 607.73,
+        "planning_ms": 657.26,
         "nodes_explored": 200001,
         "plan": []
       }
@@ -252,7 +252,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 90.35,
+        "planning_ms": 90.23,
         "nodes_explored": 29417,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -268,7 +268,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 95.91,
+        "planning_ms": 97.06,
         "nodes_explored": 29657,
         "plan": [
           "grasp(snack_1, robot)",
@@ -284,7 +284,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 161.13,
+        "planning_ms": 164.06,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -315,7 +315,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 91.28,
+        "planning_ms": 94.75,
         "nodes_explored": 29417,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -331,7 +331,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 91.08,
+        "planning_ms": 92.36,
         "nodes_explored": 29657,
         "plan": [
           "grasp(snack_1, robot)",
@@ -347,7 +347,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 174.55,
+        "planning_ms": 174.15,
         "nodes_explored": 56731,
         "plan": [
           "grasp(module_1, robot)",
@@ -381,7 +381,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 91.23,
+        "planning_ms": 91.12,
         "nodes_explored": 29417,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -397,7 +397,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 90.4,
+        "planning_ms": 91.71,
         "nodes_explored": 29657,
         "plan": [
           "grasp(snack_1, robot)",
@@ -413,7 +413,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 151.62,
+        "planning_ms": 152.69,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -444,7 +444,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 89.71,
+        "planning_ms": 93.33,
         "nodes_explored": 29417,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -460,7 +460,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 90.24,
+        "planning_ms": 91.99,
         "nodes_explored": 29657,
         "plan": [
           "grasp(snack_1, robot)",
@@ -476,7 +476,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 172.38,
+        "planning_ms": 175.84,
         "nodes_explored": 56731,
         "plan": [
           "grasp(module_1, robot)",
@@ -498,7 +498,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 50001,
     "task_results": [
       {
@@ -510,7 +510,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 153.76,
+        "planning_ms": 151.52,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -523,7 +523,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 151.4,
+        "planning_ms": 153.88,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -536,7 +536,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.67,
+        "planning_ms": 159.59,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -549,7 +549,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.69,
+        "planning_ms": 151.66,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -562,7 +562,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 164.44,
+        "planning_ms": 155.08,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -575,7 +575,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 160.3,
+        "planning_ms": 153.73,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -588,7 +588,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 154.3,
+        "planning_ms": 152.58,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -601,7 +601,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 150.48,
+        "planning_ms": 151.3,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -614,7 +614,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 147.24,
+        "planning_ms": 149.18,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -627,7 +627,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.27,
+        "planning_ms": 151.79,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -640,7 +640,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.13,
+        "planning_ms": 149.94,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -653,7 +653,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 152.16,
+        "planning_ms": 157.11,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -667,7 +667,98 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 149.4,
+        "planning_ms": 155.47,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.91,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.17,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.65,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 159.69,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.7,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.26,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.68,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -686,7 +777,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 200001,
     "task_results": [
       {
@@ -698,7 +789,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 608.61,
+        "planning_ms": 596.14,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -711,7 +802,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 594.5,
+        "planning_ms": 605.34,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -724,7 +815,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 602.31,
+        "planning_ms": 599.42,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -737,7 +828,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 631.32,
+        "planning_ms": 593.68,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -750,7 +841,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 612.8,
+        "planning_ms": 592.35,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -763,7 +854,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 591.18,
+        "planning_ms": 592.99,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -776,7 +867,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 587.13,
+        "planning_ms": 630.73,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -789,7 +880,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 595.34,
+        "planning_ms": 640.35,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -802,7 +893,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 584.35,
+        "planning_ms": 602.49,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -815,7 +906,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 593.79,
+        "planning_ms": 616.69,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -828,7 +919,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 602.99,
+        "planning_ms": 620.42,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -841,7 +932,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 611.37,
+        "planning_ms": 616.52,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -855,7 +946,98 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 589.58,
+        "planning_ms": 597.01,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 608.29,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 605.21,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 606.14,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 611.22,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 613.03,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 592.08,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 595.13,
         "nodes_explored": 200001,
         "plan": []
       }
@@ -874,1384 +1056,11 @@
     "total_complexity": 107,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 13,
+    "total_tasks": 20,
     "avg_nodes": 50001,
     "task_results": [
       {
         "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.24,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.22,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 146.84,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.45,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.96,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.19,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 154.17,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 172.14,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 150.26,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.92,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.57,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 151.53,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 149.61,
-        "nodes_explored": 50001,
-        "plan": []
-      }
-    ]
-  },
-  {
-    "stage": 3,
-    "system": "Expand-Only",
-    "bfs_config": "relaxed",
-    "active_predicates": 48,
-    "active_rules": 10,
-    "active_constraints": 10,
-    "active_actions": 39,
-    "pddl_lines": 260,
-    "type_count": 81,
-    "total_complexity": 107,
-    "plannable_rate": 0.0,
-    "plannable_count": 0,
-    "total_tasks": 13,
-    "avg_nodes": 200001,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 602.54,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 605.87,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 618.17,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 604.37,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 601.29,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 620.68,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 620.87,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 594.46,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 581.23,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 672.33,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 593.97,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 650.17,
-        "nodes_explored": 200001,
-        "plan": []
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 607.91,
-        "nodes_explored": 200001,
-        "plan": []
-      }
-    ]
-  },
-  {
-    "stage": 3,
-    "system": "Expand+Rewrite",
-    "bfs_config": "standard",
-    "active_predicates": 43,
-    "active_rules": 8,
-    "active_constraints": 10,
-    "active_actions": 39,
-    "pddl_lines": 255,
-    "type_count": 81,
-    "total_complexity": 100,
-    "plannable_rate": 0.8462,
-    "plannable_count": 11,
-    "total_tasks": 13,
-    "avg_nodes": 29778,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.79,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.79,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(fruit_1, shelf_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.75,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(noodle_1, table_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.51,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(dough_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.99,
-        "nodes_explored": 34921,
-        "plan": [
-          "grasp(bottle_1, robot)",
-          "place(bottle_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 106.98,
-        "nodes_explored": 35161,
-        "plan": [
-          "grasp(snack_1, robot)",
-          "place(snack_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.92,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(cup_1, robot)",
-          "place(cup_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.38,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 106.24,
-        "nodes_explored": 35965,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 146.78,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 146.04,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 3,
-        "planning_ms": 100.6,
-        "nodes_explored": 32827,
-        "plan": [
-          "fold(shirt_1, robot)",
-          "grasp(shirt_1, robot)",
-          "place(shirt_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 103.31,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, tray_1, robot)"
-        ]
-      }
-    ]
-  },
-  {
-    "stage": 3,
-    "system": "Expand+Rewrite",
-    "bfs_config": "relaxed",
-    "active_predicates": 43,
-    "active_rules": 8,
-    "active_constraints": 10,
-    "active_actions": 39,
-    "pddl_lines": 255,
-    "type_count": 81,
-    "total_complexity": 100,
-    "plannable_rate": 1.0,
-    "plannable_count": 13,
-    "total_tasks": 13,
-    "avg_nodes": 34464,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.37,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.55,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(fruit_1, shelf_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.37,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(noodle_1, table_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 33.51,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(dough_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.33,
-        "nodes_explored": 34921,
-        "plan": [
-          "grasp(bottle_1, robot)",
-          "place(bottle_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.63,
-        "nodes_explored": 35161,
-        "plan": [
-          "grasp(snack_1, robot)",
-          "place(snack_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 104.75,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(cup_1, robot)",
-          "place(cup_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 103.7,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 141.49,
-        "nodes_explored": 35965,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 223.93,
-        "nodes_explored": 67331,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 284.88,
-        "nodes_explored": 93591,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 3,
-        "planning_ms": 103.4,
-        "nodes_explored": 32827,
-        "plan": [
-          "fold(shirt_1, robot)",
-          "grasp(shirt_1, robot)",
-          "place(shirt_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 107.72,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, tray_1, robot)"
-        ]
-      }
-    ]
-  },
-  {
-    "stage": 3,
-    "system": "Expand+ManualOpt",
-    "bfs_config": "standard",
-    "active_predicates": 43,
-    "active_rules": 7,
-    "active_constraints": 10,
-    "active_actions": 39,
-    "pddl_lines": 255,
-    "type_count": 81,
-    "total_complexity": 99,
-    "plannable_rate": 0.8462,
-    "plannable_count": 11,
-    "total_tasks": 13,
-    "avg_nodes": 29778,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 35.81,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 34.38,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(fruit_1, shelf_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 34.67,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(noodle_1, table_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 35.38,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(dough_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 109.87,
-        "nodes_explored": 34921,
-        "plan": [
-          "grasp(bottle_1, robot)",
-          "place(bottle_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 109.87,
-        "nodes_explored": 35161,
-        "plan": [
-          "grasp(snack_1, robot)",
-          "place(snack_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 109.29,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(cup_1, robot)",
-          "place(cup_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 106.01,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 109.7,
-        "nodes_explored": 35965,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 152.65,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 151.11,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 3,
-        "planning_ms": 100.43,
-        "nodes_explored": 32827,
-        "plan": [
-          "fold(shirt_1, robot)",
-          "grasp(shirt_1, robot)",
-          "place(shirt_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 107.86,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, tray_1, robot)"
-        ]
-      }
-    ]
-  },
-  {
-    "stage": 3,
-    "system": "Expand+ManualOpt",
-    "bfs_config": "relaxed",
-    "active_predicates": 43,
-    "active_rules": 7,
-    "active_constraints": 10,
-    "active_actions": 39,
-    "pddl_lines": 255,
-    "type_count": 81,
-    "total_complexity": 99,
-    "plannable_rate": 1.0,
-    "plannable_count": 13,
-    "total_tasks": 13,
-    "avg_nodes": 34464,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 34.63,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 36.88,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(fruit_1, shelf_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 37.26,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(noodle_1, table_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 35.58,
-        "nodes_explored": 10857,
-        "plan": [
-          "serve(dough_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 108.18,
-        "nodes_explored": 34921,
-        "plan": [
-          "grasp(bottle_1, robot)",
-          "place(bottle_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 108.42,
-        "nodes_explored": 35161,
-        "plan": [
-          "grasp(snack_1, robot)",
-          "place(snack_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 109.24,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(cup_1, robot)",
-          "place(cup_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 105.5,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 111.0,
-        "nodes_explored": 35965,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 204.01,
-        "nodes_explored": 67331,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 282.1,
-        "nodes_explored": 93591,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 3,
-        "planning_ms": 100.89,
-        "nodes_explored": 32827,
-        "plan": [
-          "fold(shirt_1, robot)",
-          "grasp(shirt_1, robot)",
-          "place(shirt_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 106.89,
-        "nodes_explored": 34937,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, tray_1, robot)"
-        ]
-      }
-    ]
-  },
-  {
-    "stage": 4,
-    "system": "Baseline",
-    "bfs_config": "standard",
-    "active_predicates": 25,
-    "active_rules": 4,
-    "active_constraints": 4,
-    "active_actions": 26,
-    "pddl_lines": 170,
-    "type_count": 45,
-    "total_complexity": 59,
-    "plannable_rate": 0.0,
-    "plannable_count": 0,
-    "total_tasks": 18,
-    "avg_nodes": 50001,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 152.91,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_fruit",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 151.09,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_noodle",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 151.42,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 151.78,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_pen_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 155.55,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_form_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 182.71,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_module_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 162.22,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 153.63,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 149.79,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_cup_to_tray",
         "degrade_type": "A",
         "involved_domains": [
           "domestic",
@@ -2264,6 +1073,84 @@
         "plan": []
       },
       {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 173.83,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 165.14,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 181.74,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 164.08,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.4,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 154.18,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
         "task": "xd_fruit_to_tray",
         "degrade_type": "A",
         "involved_domains": [
@@ -2272,7 +1159,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 149.17,
+        "planning_ms": 153.3,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2285,33 +1172,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 147.16,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_desk_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 147.45,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_lift_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 152.26,
+        "planning_ms": 148.2,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2324,7 +1185,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.69,
+        "planning_ms": 146.7,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2337,7 +1198,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.39,
+        "planning_ms": 147.52,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2350,7 +1211,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 152.82,
+        "planning_ms": 151.02,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2364,7 +1225,2082 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 150.16,
+        "planning_ms": 152.48,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.94,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 157.82,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.47,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.02,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 147.39,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 146.97,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 148.16,
+        "nodes_explored": 50001,
+        "plan": []
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "system": "Expand-Only",
+    "bfs_config": "relaxed",
+    "active_predicates": 48,
+    "active_rules": 10,
+    "active_constraints": 10,
+    "active_actions": 39,
+    "pddl_lines": 260,
+    "type_count": 81,
+    "total_complexity": 107,
+    "plannable_rate": 0.0,
+    "plannable_count": 0,
+    "total_tasks": 20,
+    "avg_nodes": 200001,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 593.9,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 593.04,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 596.67,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 592.8,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 591.35,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 608.63,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 610.08,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 614.25,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 604.36,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 617.43,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 607.02,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 622.88,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 617.71,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 635.9,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 619.77,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 616.46,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 644.56,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 602.11,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 599.73,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 624.48,
+        "nodes_explored": 200001,
+        "plan": []
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "system": "Expand+Rewrite",
+    "bfs_config": "standard",
+    "active_predicates": 43,
+    "active_rules": 8,
+    "active_constraints": 10,
+    "active_actions": 39,
+    "pddl_lines": 255,
+    "type_count": 81,
+    "total_complexity": 100,
+    "plannable_rate": 0.8,
+    "plannable_count": 16,
+    "total_tasks": 20,
+    "avg_nodes": 26352,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 38.9,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.73,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.68,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(noodle_1, table_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.49,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(dough_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 104.15,
+        "nodes_explored": 34921,
+        "plan": [
+          "grasp(bottle_1, robot)",
+          "place(bottle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 105.51,
+        "nodes_explored": 35161,
+        "plan": [
+          "grasp(snack_1, robot)",
+          "place(snack_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 105.26,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(cup_1, robot)",
+          "place(cup_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 104.55,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 106.51,
+        "nodes_explored": 35965,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 146.62,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 146.61,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 3,
+        "planning_ms": 114.03,
+        "nodes_explored": 32827,
+        "plan": [
+          "fold(shirt_1, robot)",
+          "grasp(shirt_1, robot)",
+          "place(shirt_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 114.64,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.51,
+        "nodes_explored": 4747,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.58,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.66,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.72,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 63.41,
+        "nodes_explored": 20751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.76,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.56,
+        "nodes_explored": 50001,
+        "plan": []
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "system": "Expand+Rewrite",
+    "bfs_config": "relaxed",
+    "active_predicates": 43,
+    "active_rules": 8,
+    "active_constraints": 10,
+    "active_actions": 39,
+    "pddl_lines": 255,
+    "type_count": 81,
+    "total_complexity": 100,
+    "plannable_rate": 1.0,
+    "plannable_count": 20,
+    "total_tasks": 20,
+    "avg_nodes": 32519,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 35.96,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 34.81,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 34.74,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(noodle_1, table_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 35.65,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(dough_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 108.82,
+        "nodes_explored": 34921,
+        "plan": [
+          "grasp(bottle_1, robot)",
+          "place(bottle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 107.64,
+        "nodes_explored": 35161,
+        "plan": [
+          "grasp(snack_1, robot)",
+          "place(snack_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 112.97,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(cup_1, robot)",
+          "place(cup_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 106.42,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 108.54,
+        "nodes_explored": 35965,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 205.19,
+        "nodes_explored": 67331,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 281.82,
+        "nodes_explored": 93591,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 3,
+        "planning_ms": 101.11,
+        "nodes_explored": 32827,
+        "plan": [
+          "fold(shirt_1, robot)",
+          "grasp(shirt_1, robot)",
+          "place(shirt_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 107.0,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.5,
+        "nodes_explored": 4747,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.86,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.91,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.18,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 64.34,
+        "nodes_explored": 20751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 286.49,
+        "nodes_explored": 93591,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 208.78,
+        "nodes_explored": 68842,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "system": "Expand+ManualOpt",
+    "bfs_config": "standard",
+    "active_predicates": 43,
+    "active_rules": 7,
+    "active_constraints": 10,
+    "active_actions": 39,
+    "pddl_lines": 255,
+    "type_count": 81,
+    "total_complexity": 99,
+    "plannable_rate": 0.8,
+    "plannable_count": 16,
+    "total_tasks": 20,
+    "avg_nodes": 26352,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 34.14,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 34.82,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 35.78,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(noodle_1, table_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.96,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(dough_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 106.07,
+        "nodes_explored": 34921,
+        "plan": [
+          "grasp(bottle_1, robot)",
+          "place(bottle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 107.33,
+        "nodes_explored": 35161,
+        "plan": [
+          "grasp(snack_1, robot)",
+          "place(snack_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 106.68,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(cup_1, robot)",
+          "place(cup_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 107.77,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 110.68,
+        "nodes_explored": 35965,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.48,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.31,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 3,
+        "planning_ms": 102.58,
+        "nodes_explored": 32827,
+        "plan": [
+          "fold(shirt_1, robot)",
+          "grasp(shirt_1, robot)",
+          "place(shirt_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 105.95,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.77,
+        "nodes_explored": 4747,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.9,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.76,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.86,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 64.26,
+        "nodes_explored": 20751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.61,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.65,
+        "nodes_explored": 50001,
+        "plan": []
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "system": "Expand+ManualOpt",
+    "bfs_config": "relaxed",
+    "active_predicates": 43,
+    "active_rules": 7,
+    "active_constraints": 10,
+    "active_actions": 39,
+    "pddl_lines": 255,
+    "type_count": 81,
+    "total_complexity": 99,
+    "plannable_rate": 1.0,
+    "plannable_count": 20,
+    "total_tasks": 20,
+    "avg_nodes": 32519,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.57,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.29,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.28,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(noodle_1, table_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 33.13,
+        "nodes_explored": 10857,
+        "plan": [
+          "serve(dough_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 103.72,
+        "nodes_explored": 34921,
+        "plan": [
+          "grasp(bottle_1, robot)",
+          "place(bottle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 105.22,
+        "nodes_explored": 35161,
+        "plan": [
+          "grasp(snack_1, robot)",
+          "place(snack_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 104.22,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(cup_1, robot)",
+          "place(cup_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 105.03,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 105.52,
+        "nodes_explored": 35965,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 198.06,
+        "nodes_explored": 67331,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 274.57,
+        "nodes_explored": 93591,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 3,
+        "planning_ms": 98.12,
+        "nodes_explored": 32827,
+        "plan": [
+          "fold(shirt_1, robot)",
+          "grasp(shirt_1, robot)",
+          "place(shirt_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 103.71,
+        "nodes_explored": 34937,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.31,
+        "nodes_explored": 4747,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.45,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.51,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 15.41,
+        "nodes_explored": 4807,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 62.26,
+        "nodes_explored": 20751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 273.77,
+        "nodes_explored": 93591,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 204.1,
+        "nodes_explored": 68842,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "system": "Baseline",
+    "bfs_config": "standard",
+    "active_predicates": 25,
+    "active_rules": 4,
+    "active_constraints": 4,
+    "active_actions": 26,
+    "pddl_lines": 170,
+    "type_count": 45,
+    "total_complexity": 59,
+    "plannable_rate": 0.0,
+    "plannable_count": 0,
+    "total_tasks": 30,
+    "avg_nodes": 50001,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 174.63,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_fruit",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 162.84,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 154.74,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.09,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_pen_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.72,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_form_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.35,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_module_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.89,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.42,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.89,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 148.53,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 147.51,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 146.37,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 145.65,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_lift_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.62,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.28,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 161.89,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 158.04,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.66,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 156.46,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 157.33,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 156.9,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 156.62,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.71,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 156.1,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.33,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.79,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.06,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 157.92,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.75,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 154.71,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -2383,7 +3319,7 @@
     "total_complexity": 59,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 200001,
     "task_results": [
       {
@@ -2395,7 +3331,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 592.46,
+        "planning_ms": 610.54,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2408,7 +3344,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 586.84,
+        "planning_ms": 604.48,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2421,7 +3357,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 587.19,
+        "planning_ms": 611.7,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2434,7 +3370,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 604.26,
+        "planning_ms": 613.5,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2447,7 +3383,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 608.8,
+        "planning_ms": 607.82,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2460,7 +3396,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 605.88,
+        "planning_ms": 646.27,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2473,7 +3409,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 607.08,
+        "planning_ms": 606.02,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2486,7 +3422,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 618.43,
+        "planning_ms": 604.1,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2499,7 +3435,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 603.13,
+        "planning_ms": 613.7,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2512,7 +3448,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 604.68,
+        "planning_ms": 610.39,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2525,7 +3461,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 608.24,
+        "planning_ms": 651.47,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2538,7 +3474,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 607.66,
+        "planning_ms": 602.46,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2551,7 +3487,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 595.11,
+        "planning_ms": 591.72,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2564,7 +3500,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 625.11,
+        "planning_ms": 643.77,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2577,7 +3513,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 605.0,
+        "planning_ms": 620.32,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2590,7 +3526,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 592.89,
+        "planning_ms": 620.55,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2603,7 +3539,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 617.22,
+        "planning_ms": 628.03,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2617,7 +3553,163 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 600.12,
+        "planning_ms": 611.9,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 621.08,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 617.65,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 636.77,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 615.76,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 622.07,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 622.7,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 601.29,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 604.84,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 593.68,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 631.85,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 617.78,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 615.53,
         "nodes_explored": 200001,
         "plan": []
       }
@@ -2636,7 +3728,7 @@
     "total_complexity": 125,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 50001,
     "task_results": [
       {
@@ -2648,7 +3740,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 171.4,
+        "planning_ms": 157.38,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2661,7 +3753,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 153.9,
+        "planning_ms": 155.38,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2674,7 +3766,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.83,
+        "planning_ms": 154.94,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2687,7 +3779,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.33,
+        "planning_ms": 166.61,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2700,7 +3792,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 147.82,
+        "planning_ms": 155.87,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2713,7 +3805,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.36,
+        "planning_ms": 153.88,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2726,7 +3818,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.78,
+        "planning_ms": 153.7,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2739,7 +3831,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 149.95,
+        "planning_ms": 155.0,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2752,7 +3844,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.91,
+        "planning_ms": 159.14,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2765,7 +3857,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 147.2,
+        "planning_ms": 154.4,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2778,7 +3870,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.69,
+        "planning_ms": 156.24,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2791,7 +3883,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 145.75,
+        "planning_ms": 149.05,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2804,7 +3896,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 150.26,
+        "planning_ms": 149.4,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2817,7 +3909,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 167.4,
+        "planning_ms": 156.14,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2830,7 +3922,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 172.56,
+        "planning_ms": 154.98,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2843,7 +3935,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 155.53,
+        "planning_ms": 153.46,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2856,7 +3948,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 155.24,
+        "planning_ms": 164.4,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -2870,7 +3962,163 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 156.67,
+        "planning_ms": 157.92,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.49,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 157.2,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.07,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.14,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.12,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 151.32,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.0,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 149.47,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 147.81,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.61,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.17,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.79,
         "nodes_explored": 50001,
         "plan": []
       }
@@ -2889,7 +4137,7 @@
     "total_complexity": 125,
     "plannable_rate": 0.0,
     "plannable_count": 0,
-    "total_tasks": 18,
+    "total_tasks": 30,
     "avg_nodes": 200001,
     "task_results": [
       {
@@ -2901,7 +4149,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 617.48,
+        "planning_ms": 646.36,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2914,7 +4162,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 607.11,
+        "planning_ms": 598.99,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2927,7 +4175,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 614.07,
+        "planning_ms": 597.24,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2940,7 +4188,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 611.72,
+        "planning_ms": 606.44,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2953,7 +4201,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 600.41,
+        "planning_ms": 596.03,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2966,7 +4214,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 605.19,
+        "planning_ms": 600.11,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2979,7 +4227,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 615.5,
+        "planning_ms": 599.42,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -2992,7 +4240,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 600.92,
+        "planning_ms": 616.98,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3005,7 +4253,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 590.64,
+        "planning_ms": 613.74,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3018,7 +4266,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 613.33,
+        "planning_ms": 616.16,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3031,7 +4279,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 622.3,
+        "planning_ms": 620.63,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3044,7 +4292,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 612.59,
+        "planning_ms": 609.91,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3057,7 +4305,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 593.16,
+        "planning_ms": 606.8,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3070,7 +4318,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 625.33,
+        "planning_ms": 623.1,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3083,7 +4331,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 605.58,
+        "planning_ms": 608.32,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3096,7 +4344,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 602.25,
+        "planning_ms": 609.38,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3109,7 +4357,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 621.86,
+        "planning_ms": 614.8,
         "nodes_explored": 200001,
         "plan": []
       },
@@ -3123,7 +4371,163 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 606.96,
+        "planning_ms": 604.8,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 608.12,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 608.71,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 628.51,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 764.3,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 658.87,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 609.1,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 636.58,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 610.84,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 609.38,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 617.54,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 612.86,
+        "nodes_explored": 200001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 612.42,
         "nodes_explored": 200001,
         "plan": []
       }
@@ -3140,10 +4544,10 @@
     "pddl_lines": 291,
     "type_count": 94,
     "total_complexity": 115,
-    "plannable_rate": 0.8333,
-    "plannable_count": 15,
-    "total_tasks": 18,
-    "avg_nodes": 34391,
+    "plannable_rate": 0.7667,
+    "plannable_count": 23,
+    "total_tasks": 30,
+    "avg_nodes": 29503,
     "task_results": [
       {
         "task": "xd_serve_salad",
@@ -3154,7 +4558,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 41.59,
+        "planning_ms": 38.03,
         "nodes_explored": 11881,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -3169,7 +4573,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 39.85,
+        "planning_ms": 37.62,
         "nodes_explored": 11881,
         "plan": [
           "serve(fruit_1, shelf_1, robot)"
@@ -3177,6 +4581,442 @@
       },
       {
         "task": "xd_serve_noodle",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 39.37,
+        "nodes_explored": 11881,
+        "plan": [
+          "serve(noodle_1, table_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_dough",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 37.34,
+        "nodes_explored": 11881,
+        "plan": [
+          "serve(dough_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_pen_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 126.96,
+        "nodes_explored": 40697,
+        "plan": [
+          "grasp(pen_1, robot)",
+          "place(pen_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_form_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 125.24,
+        "nodes_explored": 40697,
+        "plan": [
+          "grasp(form_1, robot)",
+          "place(form_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_module_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 141.16,
+        "nodes_explored": 40825,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_item_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 128.89,
+        "nodes_explored": 40681,
+        "plan": [
+          "grasp(bottle_1, robot)",
+          "place(bottle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_snack_to_belt",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "industrial"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 125.18,
+        "nodes_explored": 40921,
+        "plan": [
+          "grasp(snack_1, robot)",
+          "place(snack_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_cup_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 124.05,
+        "nodes_explored": 40697,
+        "plan": [
+          "grasp(cup_1, robot)",
+          "place(cup_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_fruit_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 122.82,
+        "nodes_explored": 40697,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_serve_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 119.01,
+        "nodes_explored": 39421,
+        "plan": [
+          "serve(salad_1, counter_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 146.22,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_lift_to_desk",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 54.82,
+        "nodes_explored": 17563,
+        "plan": [
+          "grasp(dumbbell_1, robot)",
+          "place(dumbbell_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "industrial"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 153.39,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_tray_crowded",
+        "degrade_type": "A",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.15,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_fold_to_tray",
+        "degrade_type": "A",
+        "involved_domains": [
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 3,
+        "planning_ms": 119.54,
+        "nodes_explored": 38623,
+        "plan": [
+          "fold(shirt_1, robot)",
+          "grasp(shirt_1, robot)",
+          "place(shirt_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_triple_chain",
+        "degrade_type": "A",
+        "involved_domains": [
+          "industrial",
+          "domestic",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 122.66,
+        "nodes_explored": 40697,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.91,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.92,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.24,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.88,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(dough_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.1,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.06,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 69.72,
+        "nodes_explored": 22751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 37.57,
+        "nodes_explored": 12025,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 148.09,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 155.92,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 166.0,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.99,
+        "nodes_explored": 50001,
+        "plan": []
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "system": "Expand+Rewrite",
+    "bfs_config": "relaxed",
+    "active_predicates": 49,
+    "active_rules": 9,
+    "active_constraints": 12,
+    "active_actions": 45,
+    "pddl_lines": 291,
+    "type_count": 94,
+    "total_complexity": 115,
+    "plannable_rate": 1.0,
+    "plannable_count": 30,
+    "total_tasks": 30,
+    "avg_nodes": 42122,
+    "task_results": [
+      {
+        "task": "xd_serve_salad",
         "degrade_type": "A",
         "involved_domains": [
           "domestic",
@@ -3187,270 +5027,6 @@
         "planning_ms": 37.74,
         "nodes_explored": 11881,
         "plan": [
-          "serve(noodle_1, table_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_dough",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 37.25,
-        "nodes_explored": 11881,
-        "plan": [
-          "serve(dough_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_pen_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "office"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 125.81,
-        "nodes_explored": 40697,
-        "plan": [
-          "grasp(pen_1, robot)",
-          "place(pen_1, whiteboard_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_form_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "office"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 124.87,
-        "nodes_explored": 40697,
-        "plan": [
-          "grasp(form_1, robot)",
-          "place(form_1, whiteboard_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_module_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "office"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 125.1,
-        "nodes_explored": 40825,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, whiteboard_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_item_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 123.9,
-        "nodes_explored": 40681,
-        "plan": [
-          "grasp(bottle_1, robot)",
-          "place(bottle_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_snack_to_belt",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "industrial"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 125.03,
-        "nodes_explored": 40921,
-        "plan": [
-          "grasp(snack_1, robot)",
-          "place(snack_1, belt_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_cup_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 124.59,
-        "nodes_explored": 40697,
-        "plan": [
-          "grasp(cup_1, robot)",
-          "place(cup_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_fruit_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 128.83,
-        "nodes_explored": 40697,
-        "plan": [
-          "grasp(fruit_1, robot)",
-          "place(fruit_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_serve_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 121.05,
-        "nodes_explored": 39421,
-        "plan": [
-          "serve(salad_1, counter_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_desk_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "office"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 149.44,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_lift_to_desk",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "office"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 58.57,
-        "nodes_explored": 17563,
-        "plan": [
-          "grasp(dumbbell_1, robot)",
-          "place(dumbbell_1, whiteboard_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_belt_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "industrial"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 164.92,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_tray_crowded",
-        "degrade_type": "A",
-        "involved_domains": [
-          "retail",
-          "restaurant"
-        ],
-        "plannable": false,
-        "plan_length": -1,
-        "planning_ms": 153.66,
-        "nodes_explored": 50001,
-        "plan": []
-      },
-      {
-        "task": "xd_fold_to_tray",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 3,
-        "planning_ms": 118.7,
-        "nodes_explored": 38623,
-        "plan": [
-          "fold(shirt_1, robot)",
-          "grasp(shirt_1, robot)",
-          "place(shirt_1, tray_1, robot)"
-        ]
-      },
-      {
-        "task": "xd_triple_chain",
-        "degrade_type": "A",
-        "involved_domains": [
-          "industrial",
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 2,
-        "planning_ms": 123.58,
-        "nodes_explored": 40697,
-        "plan": [
-          "grasp(module_1, robot)",
-          "place(module_1, tray_1, robot)"
-        ]
-      }
-    ]
-  },
-  {
-    "stage": 4,
-    "system": "Expand+Rewrite",
-    "bfs_config": "relaxed",
-    "active_predicates": 49,
-    "active_rules": 9,
-    "active_constraints": 12,
-    "active_actions": 45,
-    "pddl_lines": 291,
-    "type_count": 94,
-    "total_complexity": 115,
-    "plannable_rate": 1.0,
-    "plannable_count": 18,
-    "total_tasks": 18,
-    "avg_nodes": 46981,
-    "task_results": [
-      {
-        "task": "xd_serve_salad",
-        "degrade_type": "A",
-        "involved_domains": [
-          "domestic",
-          "restaurant"
-        ],
-        "plannable": true,
-        "plan_length": 1,
-        "planning_ms": 37.53,
-        "nodes_explored": 11881,
-        "plan": [
           "serve(salad_1, counter_1, robot)"
         ]
       },
@@ -3463,7 +5039,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 40.16,
+        "planning_ms": 42.3,
         "nodes_explored": 11881,
         "plan": [
           "serve(fruit_1, shelf_1, robot)"
@@ -3478,7 +5054,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.28,
+        "planning_ms": 45.44,
         "nodes_explored": 11881,
         "plan": [
           "serve(noodle_1, table_1, robot)"
@@ -3493,7 +5069,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.53,
+        "planning_ms": 41.97,
         "nodes_explored": 11881,
         "plan": [
           "serve(dough_1, counter_1, robot)"
@@ -3508,7 +5084,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.47,
+        "planning_ms": 130.31,
         "nodes_explored": 40697,
         "plan": [
           "grasp(pen_1, robot)",
@@ -3524,7 +5100,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.6,
+        "planning_ms": 127.42,
         "nodes_explored": 40697,
         "plan": [
           "grasp(form_1, robot)",
@@ -3540,7 +5116,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 126.16,
+        "planning_ms": 131.25,
         "nodes_explored": 40825,
         "plan": [
           "grasp(module_1, robot)",
@@ -3556,7 +5132,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.4,
+        "planning_ms": 125.54,
         "nodes_explored": 40681,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -3572,7 +5148,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 125.78,
+        "planning_ms": 124.92,
         "nodes_explored": 40921,
         "plan": [
           "grasp(snack_1, robot)",
@@ -3588,7 +5164,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.92,
+        "planning_ms": 124.51,
         "nodes_explored": 40697,
         "plan": [
           "grasp(cup_1, robot)",
@@ -3604,7 +5180,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 125.68,
+        "planning_ms": 127.57,
         "nodes_explored": 40697,
         "plan": [
           "grasp(fruit_1, robot)",
@@ -3620,7 +5196,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 120.95,
+        "planning_ms": 121.34,
         "nodes_explored": 39421,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -3635,7 +5211,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 598.7,
+        "planning_ms": 571.92,
         "nodes_explored": 188197,
         "plan": [
           "grasp(pen_1, robot)",
@@ -3651,7 +5227,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 58.3,
+        "planning_ms": 55.63,
         "nodes_explored": 17563,
         "plan": [
           "grasp(dumbbell_1, robot)",
@@ -3667,7 +5243,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 240.97,
+        "planning_ms": 238.59,
         "nodes_explored": 78531,
         "plan": [
           "grasp(module_1, robot)",
@@ -3683,7 +5259,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 334.4,
+        "planning_ms": 344.91,
         "nodes_explored": 109891,
         "plan": [
           "grasp(fruit_1, robot)",
@@ -3699,7 +5275,7 @@
         ],
         "plannable": true,
         "plan_length": 3,
-        "planning_ms": 118.18,
+        "planning_ms": 120.63,
         "nodes_explored": 38623,
         "plan": [
           "fold(shirt_1, robot)",
@@ -3717,8 +5293,192 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.57,
+        "planning_ms": 126.38,
         "nodes_explored": 40697,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.35,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.33,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.3,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.4,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(dough_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.35,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.24,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 77.67,
+        "nodes_explored": 22751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 43.25,
+        "nodes_explored": 12025,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 258.07,
+        "nodes_explored": 80587,
+        "plan": [
+          "grasp(form_1, robot)",
+          "place(form_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 250.63,
+        "nodes_explored": 80749,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 330.85,
+        "nodes_explored": 109891,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 242.04,
+        "nodes_explored": 80749,
         "plan": [
           "grasp(module_1, robot)",
           "place(module_1, tray_1, robot)"
@@ -3737,10 +5497,10 @@
     "pddl_lines": 291,
     "type_count": 94,
     "total_complexity": 114,
-    "plannable_rate": 0.8333,
-    "plannable_count": 15,
-    "total_tasks": 18,
-    "avg_nodes": 34391,
+    "plannable_rate": 0.7667,
+    "plannable_count": 23,
+    "total_tasks": 30,
+    "avg_nodes": 29503,
     "task_results": [
       {
         "task": "xd_serve_salad",
@@ -3751,7 +5511,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.21,
+        "planning_ms": 37.02,
         "nodes_explored": 11881,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -3766,7 +5526,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.92,
+        "planning_ms": 37.23,
         "nodes_explored": 11881,
         "plan": [
           "serve(fruit_1, shelf_1, robot)"
@@ -3781,7 +5541,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.15,
+        "planning_ms": 37.18,
         "nodes_explored": 11881,
         "plan": [
           "serve(noodle_1, table_1, robot)"
@@ -3796,7 +5556,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 37.24,
+        "planning_ms": 37.3,
         "nodes_explored": 11881,
         "plan": [
           "serve(dough_1, counter_1, robot)"
@@ -3811,7 +5571,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 123.86,
+        "planning_ms": 123.91,
         "nodes_explored": 40697,
         "plan": [
           "grasp(pen_1, robot)",
@@ -3827,7 +5587,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 121.19,
+        "planning_ms": 122.84,
         "nodes_explored": 40697,
         "plan": [
           "grasp(form_1, robot)",
@@ -3843,7 +5603,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 122.19,
+        "planning_ms": 123.59,
         "nodes_explored": 40825,
         "plan": [
           "grasp(module_1, robot)",
@@ -3859,7 +5619,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 122.59,
+        "planning_ms": 123.05,
         "nodes_explored": 40681,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -3875,7 +5635,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 124.64,
+        "planning_ms": 124.08,
         "nodes_explored": 40921,
         "plan": [
           "grasp(snack_1, robot)",
@@ -3891,7 +5651,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 126.81,
+        "planning_ms": 122.94,
         "nodes_explored": 40697,
         "plan": [
           "grasp(cup_1, robot)",
@@ -3907,7 +5667,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 127.61,
+        "planning_ms": 134.76,
         "nodes_explored": 40697,
         "plan": [
           "grasp(fruit_1, robot)",
@@ -3923,7 +5683,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 118.08,
+        "planning_ms": 136.86,
         "nodes_explored": 39421,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -3938,7 +5698,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 145.08,
+        "planning_ms": 161.11,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -3951,7 +5711,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 53.88,
+        "planning_ms": 66.82,
         "nodes_explored": 17563,
         "plan": [
           "grasp(dumbbell_1, robot)",
@@ -3967,7 +5727,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 150.79,
+        "planning_ms": 164.81,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -3980,7 +5740,7 @@
         ],
         "plannable": false,
         "plan_length": -1,
-        "planning_ms": 148.5,
+        "planning_ms": 153.28,
         "nodes_explored": 50001,
         "plan": []
       },
@@ -3993,7 +5753,7 @@
         ],
         "plannable": true,
         "plan_length": 3,
-        "planning_ms": 117.55,
+        "planning_ms": 118.51,
         "nodes_explored": 38623,
         "plan": [
           "fold(shirt_1, robot)",
@@ -4011,12 +5771,184 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 120.92,
+        "planning_ms": 122.2,
         "nodes_explored": 40697,
         "plan": [
           "grasp(module_1, robot)",
           "place(module_1, tray_1, robot)"
         ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.97,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.03,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.08,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 16.98,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(dough_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.06,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.29,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 69.98,
+        "nodes_explored": 22751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 37.79,
+        "nodes_explored": 12025,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.7,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.93,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 152.02,
+        "nodes_explored": 50001,
+        "plan": []
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": false,
+        "plan_length": -1,
+        "planning_ms": 150.16,
+        "nodes_explored": 50001,
+        "plan": []
       }
     ]
   },
@@ -4032,9 +5964,9 @@
     "type_count": 94,
     "total_complexity": 114,
     "plannable_rate": 1.0,
-    "plannable_count": 18,
-    "total_tasks": 18,
-    "avg_nodes": 46981,
+    "plannable_count": 30,
+    "total_tasks": 30,
+    "avg_nodes": 42122,
     "task_results": [
       {
         "task": "xd_serve_salad",
@@ -4045,7 +5977,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 36.82,
+        "planning_ms": 37.35,
         "nodes_explored": 11881,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -4060,7 +5992,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 36.75,
+        "planning_ms": 37.48,
         "nodes_explored": 11881,
         "plan": [
           "serve(fruit_1, shelf_1, robot)"
@@ -4075,7 +6007,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 36.76,
+        "planning_ms": 37.62,
         "nodes_explored": 11881,
         "plan": [
           "serve(noodle_1, table_1, robot)"
@@ -4090,7 +6022,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 36.53,
+        "planning_ms": 41.22,
         "nodes_explored": 11881,
         "plan": [
           "serve(dough_1, counter_1, robot)"
@@ -4105,7 +6037,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 120.71,
+        "planning_ms": 136.06,
         "nodes_explored": 40697,
         "plan": [
           "grasp(pen_1, robot)",
@@ -4121,7 +6053,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 122.35,
+        "planning_ms": 128.71,
         "nodes_explored": 40697,
         "plan": [
           "grasp(form_1, robot)",
@@ -4137,7 +6069,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 123.06,
+        "planning_ms": 134.48,
         "nodes_explored": 40825,
         "plan": [
           "grasp(module_1, robot)",
@@ -4153,7 +6085,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 120.69,
+        "planning_ms": 126.65,
         "nodes_explored": 40681,
         "plan": [
           "grasp(bottle_1, robot)",
@@ -4169,7 +6101,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 122.68,
+        "planning_ms": 124.99,
         "nodes_explored": 40921,
         "plan": [
           "grasp(snack_1, robot)",
@@ -4185,7 +6117,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 131.86,
+        "planning_ms": 124.91,
         "nodes_explored": 40697,
         "plan": [
           "grasp(cup_1, robot)",
@@ -4201,7 +6133,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 120.91,
+        "planning_ms": 124.02,
         "nodes_explored": 40697,
         "plan": [
           "grasp(fruit_1, robot)",
@@ -4217,7 +6149,7 @@
         ],
         "plannable": true,
         "plan_length": 1,
-        "planning_ms": 118.38,
+        "planning_ms": 118.96,
         "nodes_explored": 39421,
         "plan": [
           "serve(salad_1, counter_1, robot)"
@@ -4232,7 +6164,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 591.36,
+        "planning_ms": 560.86,
         "nodes_explored": 188197,
         "plan": [
           "grasp(pen_1, robot)",
@@ -4248,7 +6180,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 54.25,
+        "planning_ms": 55.21,
         "nodes_explored": 17563,
         "plan": [
           "grasp(dumbbell_1, robot)",
@@ -4264,7 +6196,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 236.35,
+        "planning_ms": 236.6,
         "nodes_explored": 78531,
         "plan": [
           "grasp(module_1, robot)",
@@ -4280,7 +6212,7 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 328.7,
+        "planning_ms": 326.71,
         "nodes_explored": 109891,
         "plan": [
           "grasp(fruit_1, robot)",
@@ -4296,7 +6228,7 @@
         ],
         "plannable": true,
         "plan_length": 3,
-        "planning_ms": 118.31,
+        "planning_ms": 120.02,
         "nodes_explored": 38623,
         "plan": [
           "fold(shirt_1, robot)",
@@ -4314,8 +6246,192 @@
         ],
         "plannable": true,
         "plan_length": 2,
-        "planning_ms": 122.46,
+        "planning_ms": 122.8,
         "nodes_explored": 40697,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 17.98,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_snack",
+        "degrade_type": "B",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 18.01,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(snack_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_salad",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 18.17,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_dough",
+        "degrade_type": "B",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 20.06,
+        "nodes_explored": 5179,
+        "plan": [
+          "serve(dough_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_noodle",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 18.26,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(noodle_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_serve_fruit",
+        "degrade_type": "B",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 18.13,
+        "nodes_explored": 5239,
+        "plan": [
+          "serve(fruit_1, belt_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 76.55,
+        "nodes_explored": 22751,
+        "plan": [
+          "serve(fruit_1, shelf_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_desk_serve_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "office",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 1,
+        "planning_ms": 40.84,
+        "nodes_explored": 12025,
+        "plan": [
+          "serve(salad_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 270.52,
+        "nodes_explored": 80587,
+        "plan": [
+          "grasp(form_1, robot)",
+          "place(form_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_desk_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "office"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 251.5,
+        "nodes_explored": 80749,
+        "plan": [
+          "grasp(module_1, robot)",
+          "place(module_1, whiteboard_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_shelf_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "retail",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 358.27,
+        "nodes_explored": 109891,
+        "plan": [
+          "grasp(fruit_1, robot)",
+          "place(fruit_1, tray_1, robot)"
+        ]
+      },
+      {
+        "task": "xd_belt_to_tray_crowded",
+        "degrade_type": "C",
+        "involved_domains": [
+          "industrial",
+          "restaurant"
+        ],
+        "plannable": true,
+        "plan_length": 2,
+        "planning_ms": 258.05,
+        "nodes_explored": 80749,
         "plan": [
           "grasp(module_1, robot)",
           "place(module_1, tray_1, robot)"

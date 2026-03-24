@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.core import SemanticSignature
 from src.experiment.systems import (
-    ALL_SYSTEMS, DOMAINS, load_sigma_0, load_deltas,
+    ALL_SYSTEMS, CROSS_DOMAIN_TEMPLATES, DOMAINS, load_sigma_0, load_deltas,
     generate_cross_domain_tasks,
 )
 from src.experiment.metrics import collect_complexity_metrics
@@ -71,7 +71,7 @@ BFS_CONFIGS = {
 }
 
 
-def run_phase2(n_tasks=36):
+def run_phase2(n_tasks=None):
     """运行二阶段跨域实验。"""
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -173,5 +173,5 @@ def run_phase2(n_tasks=36):
 
 
 if __name__ == "__main__":
-    n = 36 if "--full" in sys.argv else 18
+    n = len(CROSS_DOMAIN_TEMPLATES) * 2 if "--full" in sys.argv else None
     run_phase2(n)

@@ -1,0 +1,9 @@
+{
+  "predicate_merges": [
+    ["on_shelf", "on"],
+    ["in_cart", "in"]
+  ],
+  "rule_folds": [
+    "checkout_ready+laundry_ready"
+  ]
+}

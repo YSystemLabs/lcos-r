@@ -249,6 +249,11 @@ def statistical_tests(data):
 
 def generate_report(data, stats):
     """生成分析报告。"""
+    rewrite_rows = [r for r in data if r["system"] == "Expand+Rewrite" and r["stage"] > 0]
+    pass3_verified_min = min((r.get("pass3_verified_rate", 0.0) for r in rewrite_rows), default=0.0)
+    q_star_total = max((r.get("q_star_total", 0) for r in data), default=0)
+    q_task_total = max((r.get("q_task_total", 0) for r in data), default=0)
+
     report_lines = [
         "# LCOS-R 实验分析报告",
         "",
@@ -276,13 +281,18 @@ def generate_report(data, stats):
         f"- **Baseline S4 可规划率**: {bl_s4['plannable_rate']*100:.0f}% (因缺乏新领域词汇)",
         f"- **Expand+Rewrite S4 可规划率**: {er_s4['plannable_rate']*100:.0f}%",
         "",
-        "### 2.2 统计显著性",
+        "### 2.2 验证强度",
+        f"- **Q_star 核心测试数**: {q_star_total}",
+        f"- **Q_task 测试总数**: {q_task_total} (30 个任务时为 10 项核心测试 + 1 项覆盖测试 + 30 项可规划性测试)",
+        f"- **Pass 3 逐任务验证率**: {pass3_verified_min*100:.0f}% (S1-S4 的 Expand+Rewrite 均通过)",
+        "",
+        "### 2.3 统计显著性",
         f"- 配对 t 检验 p = {stats['paired_t_test']['p']}",
         f"- Expand-Only 平均复杂度: {stats['expand_only_mean']}",
         f"- Expand+Rewrite 平均复杂度: {stats['rewrite_mean']}",
         f"- 平均削减: {stats['mean_reduction']}",
         "",
-        "### 2.3 Rewrite 效果分解",
+        "### 2.4 Rewrite 效果分解",
         "- **Pass 1 (谓词消除)**: 每阶段消除 2 个同义谓词",
         "- **Pass 2 (规则折叠)**: 每阶段折叠 1 条同构规则",
         "- **Pass 3 (对象裁剪)**: per-task 裁剪无关领域类型",
@@ -326,9 +336,9 @@ def generate_report(data, stats):
     ])
 
     report = "\n".join(report_lines)
-    with open(RESULTS_DIR / "analysis.md", "w") as f:
+    with open(RESULTS_DIR / "phase1_analysis.md", "w") as f:
         f.write(report)
-    print(f"\n  ✓ Report: {RESULTS_DIR / 'analysis.md'}")
+    print(f"\n  ✓ Report: {RESULTS_DIR / 'phase1_analysis.md'}")
     return report
 
 
@@ -350,7 +360,7 @@ def main():
     print("\n" + "="*50)
     print("Analysis complete!")
     print(f"Figures: {FIG_DIR}/")
-    print(f"Report: {RESULTS_DIR / 'analysis.md'}")
+    print(f"Report: {RESULTS_DIR / 'phase1_analysis.md'}")
 
 
 if __name__ == "__main__":

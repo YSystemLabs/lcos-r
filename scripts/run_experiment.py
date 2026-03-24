@@ -78,21 +78,25 @@ def run_experiment(n_tasks_per_domain: int = 30, is_pilot: bool = False):
             # 收集复杂度指标
             complexity = collect_complexity_metrics(sigma)
 
+            if system.name in ("Expand+Rewrite", "Expand+ManualOpt") and stage > 0:
+                verification_tasks = [remap_task_predicates(task, sigma) for task in tasks]
+            else:
+                verification_tasks = tasks
+
             # 对每个任务收集规划指标
             plannable_count = 0
             total_plan_time = 0.0
             total_plan_length = 0
             task_results = []
+            pass3_verified_count = 0
 
-            for task in tasks:
+            for task, task_mapped in zip(tasks, verification_tasks):
                 # Remap task predicates for systems that did predicate elimination
-                if system.name in ("Expand+Rewrite", "Expand+ManualOpt") and stage > 0:
-                    task_mapped = remap_task_predicates(task, sigma)
-                else:
-                    task_mapped = task
                 # Per-task pruning for Expand+Rewrite
                 if system.name == "Expand+Rewrite" and stage > 0:
-                    sigma_for_task, _ = run_task_pruning(sigma, task_mapped)
+                    sigma_for_task, pruning_stats = run_task_pruning(sigma, task_mapped)
+                    if pruning_stats.get("verified"):
+                        pass3_verified_count += 1
                 else:
                     sigma_for_task = sigma
                 pm = collect_planning_metrics(sigma_for_task, task_mapped)
@@ -111,7 +115,7 @@ def run_experiment(n_tasks_per_domain: int = 30, is_pilot: bool = False):
             avg_plan_time = total_plan_time / len(tasks) if tasks else 0
 
             # 验证指标
-            verification = collect_verification_metrics(sigma, tasks)
+            verification = collect_verification_metrics(sigma, verification_tasks)
 
             # Rewrite 统计（仅 Expand+Rewrite）
             rewrite_ms = 0.0
@@ -138,6 +142,8 @@ def run_experiment(n_tasks_per_domain: int = 30, is_pilot: bool = False):
                 "total_planning_ms": round(total_plan_time, 2),
                 "avg_plan_length": round(total_plan_length / max(1, plannable_count), 2),
                 "rewrite_ms": round(rewrite_ms, 2),
+                "pass3_verified_count": pass3_verified_count,
+                "pass3_verified_rate": round(pass3_verified_count / len(tasks), 4) if tasks else 0.0,
                 **verification,
                 "task_results": task_results,
                 "rewrite_log": rewrite_log,
