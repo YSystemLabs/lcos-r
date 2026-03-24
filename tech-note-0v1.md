@@ -235,7 +235,7 @@ $$ b_t'(\omega) \propto O_t(o_t \mid \omega) \, b_t(\omega) $$
 工程上， $b_t$ 可通过以下方式近似：
 
 - 粒子滤波（小规模对象域）
-- Top-$k$ 假设集（中等规模）
+- Top- $k$ 假设集（中等规模）
 - 因子图 / learned posterior（大规模连续态）
 
 ---
@@ -433,7 +433,7 @@ $\equiv_t$ 是真正的等价关系（满足自反性、对称性、传递性）
 
 $$ c \sim_{\varepsilon,t} c' \iff \forall q \in Q_t,\ |q(c)-q(c')| \le \varepsilon_q $$
 
-**警告**： $\sim_{\varepsilon,t}$ **不满足传递性** —— $c \sim_{\varepsilon,t} c'$ 且 $c' \sim_{\varepsilon,t} c''$ 不能推出 $c \sim_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon_q$ 的累积偏差）。因此 $\sim_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导**$\varepsilon$ -邻域**。
+**警告**： $\sim\_{\varepsilon,t}$ **不满足传递性** —— $c \sim\_{\varepsilon,t} c'$ 且 $c' \sim\_{\varepsilon,t} c''$ 不能推出 $c \sim\_{\varepsilon,t} c''$ （三角不等式只保证 $2\varepsilon\_q$ 的累积偏差）。因此 $\sim\_{\varepsilon,t}$ 不是等价关系，不诱导等价类，只诱导 $\varepsilon$ **-邻域**。
 
 在后续讨论中：
 
@@ -575,7 +575,7 @@ $$
 > **approximate rewrite = $\varepsilon$ -邻域内优化（近似保义，需误差预算）**
 > **dynamics = 等价类间迁移（语义变化）**
 
-注意："等价类"严格限于精确等价 $\equiv_t$ 。approximate rewrite 不在"等价类内"，而是在"$\varepsilon$ -邻域内"——这个区分是 §5.3 修正的直接推论。
+注意："等价类"严格限于精确等价 $\equiv_t$ 。approximate rewrite 不在"等价类内"，而是在" $\varepsilon$ -邻域内"——这个区分是 §5.3 修正的直接推论。
 
 ### 等价类随测试集演化的稳定性
 
@@ -790,7 +790,9 @@ $$ J = L_{\mathrm{pred}} +\lambda_1 L_{\mathrm{plan}} +\lambda_2 L_{\mathrm{cali
 因此，扩展准入使用 $J$ ，扩展后的 rewrite/编译过程使用 $\mathrm{Cost}$ ；二者是“准入代理”与“编译目标”的关系。
 
 只有当：
+
 $$ J_{new} < J_{old} - \epsilon $$
+
 才接受扩展。
 
 #### 准入评估的循环依赖与廉价近似
